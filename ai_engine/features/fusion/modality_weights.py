@@ -1,0 +1,9 @@
+class ModalityWeights:
+
+    AUDIO_WEIGHT = 0.35
+
+    VISUAL_WEIGHT = 0.30
+
+    BEHAVIORAL_WEIGHT = 0.20
+
+    TEMPORAL_WEIGHT = 0.15

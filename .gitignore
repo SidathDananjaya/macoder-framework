@@ -1,0 +1,47 @@
+# Python virtual environments
+vision_env/
+backend/venv/
+venv/
+env/
+.env
+
+# Node (frontend)
+frontend/node_modules/
+node_modules/
+
+# Dataset & raw data (large / generated)
+datasets/raw/
+datasets/processed/   # optional – if you want to keep processed, remove this line
+temp_uploads/
+outputs/              # session logs & generated outputs
+
+# Experiment outputs (model files, plots, etc.)
+experiments/*/        # ignore all subfolders, but keep folder structure if needed
+!experiments/README.md
+
+# Byte-compiled / logs
+__pycache__/
+*.pyc
+*.log
+*.db
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Frontend build & dependencies
+frontend/dist/
+frontend/.vite/
+
+# Backend – maybe ignore local config with secrets
+backend/app/core/config_local.py
+*.pkl
+*.h5
+*.npy
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+htmlcov/
