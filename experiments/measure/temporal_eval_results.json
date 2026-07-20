@@ -1,0 +1,12 @@
+{
+  "leaky_9feat_random_split": {
+    "accuracy": 0.709,
+    "macro_f1": 0.698,
+    "n_test": 540
+  },
+  "honest_7feat_blocked_split": {
+    "accuracy": 0.417,
+    "macro_f1": 0.41,
+    "n_test": 540
+  }
+}

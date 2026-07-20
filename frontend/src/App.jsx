@@ -1,60 +1,193 @@
 import React, {
   useEffect,
+  useRef,
   useState
 } from "react"
 
 import {
-  getSessionSummary,
-  getSessionData
+  exportSessionCsv,
+  exportSessionJson,
+  getSessionReport,
+  exportSessionReport,
+  getSessionInterpretation
 } from "./services/api"
 
 import LiveCamera from "./components/LiveCamera"
 
+import SessionTimeline from "./components/SessionTimeline"
+
+import LiveCharts from "./components/LiveCharts"
+
+import SessionReport from "./components/SessionReport"
+
+import SessionInterpretation from "./components/SessionInterpretation"
+
+// Elapsed milliseconds -> MM:SS.
+const fmt = (ms) => {
+  const s = Math.floor(ms / 1000)
+  const mm = String(Math.floor(s / 60)).padStart(2, "0")
+  const ss = String(s % 60).padStart(2, "0")
+  return `${mm}:${ss}`
+}
+
 const App = () => {
 
-  const [summary, setSummary] = useState(null)
-
+  // Every panel is driven from the current session's frames (accumulated in
+  // `data` during the session, frozen on Stop) so the whole page reflects one
+  // consistent session — no stale CSV-on-disk from a previous run.
   const [data, setData] = useState([])
 
   const [liveAI, setLiveAI] = useState(null)
 
-  useEffect(() => {
+  const [timeline, setTimeline] = useState([])
 
-    loadData()
+  const [history, setHistory] = useState([])
 
-  }, [])
+  // Phase 8 - the generated interview report (null until requested).
+  const [report, setReport] = useState(null)
 
-  const loadData = async () => {
+  // Phase 9 - the LLM interpretation (null until requested) + loading flag.
+  const [interpretation, setInterpretation] = useState(null)
+  const [interpreting, setInterpreting] = useState(false)
 
-    try {
+  // Whether a live session is running (camera + mic active). Off until the
+  // user presses Start, so analysis is a deliberate, freezable session.
+  const [recording, setRecording] = useState(false)
 
-      const summaryData =
-        await getSessionSummary()
+  // Change-detection state for the timeline. Kept in a ref so per-frame
+  // comparisons never trigger a re-render.
+  const tlRef = useRef({
+    startMs: null,
+    lastEmotion: null,
+    lastRisk: null
+  })
 
-      const sessionData =
-        await getSessionData()
-
-      setSummary(summaryData)
-
-      setData(sessionData)
-
-    } catch (error) {
-
-      console.error(error)
+  const startSession = () => {
+    tlRef.current = {
+      startMs: null,
+      lastEmotion: null,
+      lastRisk: null
     }
+    setTimeline([])
+    setHistory([])
+    // Fresh session: clear the previous run's frames and its report/interpretation
+    // so the tiles, table and panels never mix two sessions.
+    setData([])
+    setReport(null)
+    setInterpretation(null)
+  }
+
+  // Append a compact numeric snapshot for the live charts, capped to the last
+  // 60 points (bounded memory, readable sparkline window).
+  const pushHistory = (aiData) => {
+    setHistory(prev => {
+      const point = {
+        t: prev.length,
+        stress: Math.round((aiData.fused_stress_score ?? 0) * 100),
+        risk: aiData.risk_score ?? 0,
+        movement: Math.round(aiData.movement_score ?? 0),
+        confidence: Math.round((aiData.fusion_confidence ?? 0) * 100),
+        blinks: aiData.blink_count ?? 0,
+        emotion: aiData.emotion ?? "neutral"
+      }
+      return [...prev, point].slice(-60)
+    })
+  }
+
+  const pushTimeline = (aiData) => {
+
+    const tl = tlRef.current
+
+    if (tl.startMs === null) {
+      tl.startMs = Date.now()
+    }
+
+    const time = fmt(Date.now() - tl.startMs)
+
+    const entries = []
+
+    if (aiData.emotion && aiData.emotion !== tl.lastEmotion) {
+      entries.push({
+        time,
+        type: "emotion",
+        label: aiData.emotion
+      })
+      tl.lastEmotion = aiData.emotion
+    }
+
+    if (aiData.risk_level && aiData.risk_level !== tl.lastRisk) {
+      entries.push({
+        time,
+        type: "risk",
+        label: aiData.risk_level,
+        score: aiData.risk_score
+      })
+      tl.lastRisk = aiData.risk_level
+    }
+
+    if (entries.length > 0) {
+      setTimeline(prev => [...prev, ...entries].slice(-200))
+    }
+  }
+
+  // Live session stats, computed from the current session's frames so they stay
+  // consistent with the report and freeze on Stop. Confidences are 0-1 in the
+  // data and rendered as percentages.
+  const avg = (fn) =>
+    data.length
+      ? data.reduce((sum, row) => sum + (fn(row) ?? 0), 0) / data.length
+      : 0
+
+  const sessionStats = {
+    records: data.length,
+    emotionConfidence:
+      avg(row => row.visual_emotion_confidence ?? row.cognitive_confidence) * 100,
+    temporalConfidence:
+      avg(row => row.fusion_confidence) * 100
   }
 
   return (
 
     <div className="min-h-screen bg-black text-white p-8">
 
-      <h1 className="text-4xl font-bold mb-8 text-cyan-400">
+      <h1 className="text-4xl font-bold mb-6 text-cyan-400">
         🧠 MaCoDeR Live Dashboard
       </h1>
+
+      {/* Session control - start/stop the camera & microphone. Stopping
+          freezes the recording so the report and AI interpretation read the
+          same session. */}
+      <div className="flex items-center gap-4 mb-8">
+
+        {!recording ? (
+          <button
+            className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-semibold"
+            onClick={() => setRecording(true)}
+          >
+            ▶ Start Session
+          </button>
+        ) : (
+          <button
+            className="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-semibold"
+            onClick={() => setRecording(false)}
+          >
+            ■ Stop Session
+          </button>
+        )}
+
+        <span className="text-gray-400">
+          {recording
+            ? "Recording — camera & microphone active."
+            : "Stopped — start a session, or generate a report."}
+        </span>
+
+      </div>
 
       <div className="grid grid-cols-2 gap-6 mb-8">
 
         <LiveCamera
+          active={recording}
+          onSessionStart={startSession}
           onAIUpdate={(aiData) => {
 
             setLiveAI(aiData)
@@ -63,6 +196,10 @@ const App = () => {
               aiData,
               ...prev
             ])
+
+            pushTimeline(aiData)
+
+            pushHistory(aiData)
 
           }}
         />
@@ -99,6 +236,39 @@ const App = () => {
 
               <div>
                 <p className="text-gray-400">
+                  Risk Score
+                </p>
+
+                <p className="text-3xl font-bold text-white">
+                  {liveAI.risk_score ?? 0}
+                  <span className="text-lg text-gray-400">
+                    {" "}
+                    / 100
+                  </span>
+                  <span className="text-lg ml-2 text-gray-300">
+                    ({liveAI.risk_level ?? "—"})
+                  </span>
+                </p>
+
+                <div className="w-full h-2 bg-gray-700 rounded mt-2">
+                  <div
+                    className={
+                      "h-2 rounded " +
+                      ((liveAI.risk_score ?? 0) >= 70
+                        ? "bg-red-500"
+                        : (liveAI.risk_score ?? 0) >= 40
+                        ? "bg-amber-400"
+                        : "bg-green-500")
+                    }
+                    style={{
+                      width: `${Math.min(liveAI.risk_score ?? 0, 100)}%`,
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div>
+                <p className="text-gray-400">
                   Confidence
                 </p>
 
@@ -124,7 +294,7 @@ const App = () => {
 
       </div>
 
-      {summary && (
+      {data.length > 0 && (
 
         <div className="grid grid-cols-3 gap-6 mb-10">
 
@@ -134,7 +304,7 @@ const App = () => {
             </h2>
 
             <p className="text-3xl font-bold text-green-400">
-              {summary.records}
+              {sessionStats.records}
             </p>
           </div>
 
@@ -144,7 +314,7 @@ const App = () => {
             </h2>
 
             <p className="text-3xl font-bold text-yellow-400">
-              {summary.avg_emotion_confidence.toFixed(1)}%
+              {sessionStats.emotionConfidence.toFixed(1)}%
             </p>
           </div>
 
@@ -154,14 +324,105 @@ const App = () => {
             </h2>
 
             <p className="text-3xl font-bold text-cyan-400">
-              {summary.avg_temporal_confidence.toFixed(1)}%
+              {sessionStats.temporalConfidence.toFixed(1)}%
             </p>
           </div>
 
         </div>
       )}
 
+      <div className="mb-10">
+        <LiveCharts history={history} />
+      </div>
+
+      <div className="mb-10">
+        <SessionTimeline timeline={timeline} />
+      </div>
+
+      <div className="mb-10">
+        <SessionReport report={report} />
+      </div>
+
+      <div className="mb-10">
+        <SessionInterpretation
+          interpretation={interpretation}
+          loading={interpreting}
+        />
+      </div>
+
       <div className="bg-gray-900 rounded-xl p-6">
+
+        <div className="flex gap-4 mb-6">
+
+          <button
+            className="bg-cyan-600 hover:bg-cyan-700 px-5 py-3 rounded-lg"
+            onClick={async () => {
+              const res = await exportSessionCsv()
+              alert(
+                res.saved
+                  ? `Session CSV saved:\n${res.file}`
+                  : "Nothing recorded yet."
+              )
+            }}
+          >
+            Export CSV
+          </button>
+
+          <button
+            className="bg-emerald-600 hover:bg-emerald-700 px-5 py-3 rounded-lg"
+            onClick={async () => {
+              const res = await exportSessionJson()
+              alert(
+                res.saved
+                  ? `Session recording saved:\n${res.file}`
+                  : "Nothing recorded yet."
+              )
+            }}
+          >
+            Save Recording (JSON)
+          </button>
+
+          <button
+            className="bg-indigo-600 hover:bg-indigo-700 px-5 py-3 rounded-lg"
+            onClick={async () => {
+              const res = await getSessionReport()
+              setReport(res)
+            }}
+          >
+            Generate Report
+          </button>
+
+          <button
+            className="bg-purple-600 hover:bg-purple-700 px-5 py-3 rounded-lg"
+            onClick={async () => {
+              const res = await exportSessionReport()
+              alert(
+                res.saved
+                  ? `Report saved:\n${res.file}`
+                  : "Nothing recorded yet."
+              )
+            }}
+          >
+            Save Report
+          </button>
+
+          <button
+            className="bg-fuchsia-600 hover:bg-fuchsia-700 px-5 py-3 rounded-lg disabled:opacity-50"
+            disabled={interpreting}
+            onClick={async () => {
+              setInterpreting(true)
+              try {
+                const res = await getSessionInterpretation()
+                setInterpretation(res)
+              } finally {
+                setInterpreting(false)
+              }
+            }}
+          >
+            AI Interpretation
+          </button>
+
+        </div>
 
         <h2 className="text-2xl mb-4">
           Live Session Data

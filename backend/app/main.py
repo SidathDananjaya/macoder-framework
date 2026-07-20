@@ -13,6 +13,10 @@ from backend.app.api.routes.websocket_stream import (
     router as websocket_router
 )
 
+from backend.app.api.routes.session_export import (
+    router as export_router
+)
+
 app = FastAPI(
     title="MaCoDeR API",
     version="1.0.0"
@@ -38,6 +42,11 @@ app.include_router(
 
 app.include_router(
     websocket_router
+)
+
+app.include_router(
+    export_router,
+    prefix="/api"
 )
 
 @app.get("/")

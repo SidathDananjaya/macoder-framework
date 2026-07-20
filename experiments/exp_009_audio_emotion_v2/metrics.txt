@@ -1,0 +1,5 @@
+features: 56
+subject_independent_acc: 0.412
+subject_independent_macroF1: 0.377
+random_split_acc: 0.606
+random_split_macroF1: 0.585

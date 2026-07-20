@@ -9,17 +9,15 @@ class SequenceBuilder:
 
             state["ear"],
 
+            state["yaw"],
+            state["pitch"],
+            state["roll"],
+
             state["blink_rate"],
 
             state["gaze_stability"],
 
             state["movement_score"],
-
-            state["yaw"],
-
-            state["pitch"],
-
-            state["roll"],
 
             state["emotion_score"],
 

@@ -29,6 +29,10 @@ from ai_engine.fusion.multimodal_fusion_engine import (
     MultimodalFusionEngine
 )
 
+from ai_engine.fusion.cognitive_fusion_engine import (
+    CognitiveFusionEngine
+)
+
 from ai_engine.inference.realtime.temporal_emotion_inference import (
     TemporalEmotionInference
 )
@@ -67,6 +71,18 @@ from ai_engine.analytics.risk_scoring_engine import (
 
 from ai_engine.analytics.session_report_generator import (
     SessionReportGenerator
+)
+
+from ai_engine.analytics.session_trend_analyzer import (
+    SessionTrendAnalyzer
+)
+
+from ai_engine.models.explainability.cognitive_explainer import (
+    CognitiveExplainer
+)
+
+from ai_engine.inference.realtime.cognitive_state_inference import (
+    CognitiveStateInference
 )
 
 class VideoProcessor:
@@ -118,12 +134,22 @@ class VideoProcessor:
 
         self.prediction_confidence = 0.0
 
+        self.emotion_history = []
+
+        self.stress_history = []
+
+        self.cognitive_history = []
+
         self.temporal_inference = (
             TemporalEmotionInference()
         )
 
         self.multimodal_fusion = (
             MultimodalFusionEngine()
+        )
+
+        self.cognitive_fusion = (
+            CognitiveFusionEngine()
         )
 
         self.temporal_prediction = "unknown"
@@ -166,6 +192,18 @@ class VideoProcessor:
 
         self.report_generator = (
             SessionReportGenerator()
+        )
+
+        self.trend_analyzer = (
+            SessionTrendAnalyzer()
+        )
+
+        self.cognitive_explainer = (
+            CognitiveExplainer()
+        )
+
+        self.cognitive_inference = (
+            CognitiveStateInference()
         )
 
         self.risk_score = 0
@@ -288,6 +326,34 @@ class VideoProcessor:
                         self.current_emotion
                     )
 
+                    cognitive_prediction = (
+                        self.cognitive_inference.predict({
+
+                            "avg_ear": ear,
+
+                            "blink_rate": self.blink_rate,
+
+                            "gaze_stability": gaze_stability,
+
+                            "movement_score": movement_score,
+
+                            "stress_score":
+                                1 if self.stress_level == "LOW"
+                                else 2 if self.stress_level == "MEDIUM"
+                                else 3,
+
+                            "cognitive_load":
+                                1 if cognitive_load == "LOW"
+                                else 2 if cognitive_load == "MEDIUM"
+                                else 3,
+
+                            "deception_risk":
+                                1 if deception_risk == "LOW"
+                                else 2 if deception_risk == "MEDIUM"
+                                else 3
+                        })
+                    )
+
                     behavior_state = self.behavioral_fusion.build_state(
                         gaze_stability,
                         gaze_shifts,
@@ -296,8 +362,20 @@ class VideoProcessor:
                         deception_risk
                     )
 
-                    emotion_score = 0.5
-                    stress_score = 0.5
+                    emotion_score = (
+                        self.prediction_confidence / 100
+                    )
+
+                    stress_score = {
+
+                        "LOW": 0.2,
+                        "MEDIUM": 0.5,
+                        "HIGH": 0.8
+
+                    }.get(
+                        self.stress_level,
+                        0.5
+                    )
 
                     state = {
 
@@ -366,6 +444,18 @@ class VideoProcessor:
                             fusion_result["cognitive_state"]
                         )
 
+                        self.emotion_history.append(
+                            self.temporal_prediction
+                        )
+
+                        self.stress_history.append(
+                            self.stress_level
+                        )
+
+                        self.cognitive_history.append(
+                            self.final_state
+                        )
+
                         stress_numeric = {
 
                             "LOW": 0.2,
@@ -422,6 +512,44 @@ class VideoProcessor:
                                 self.anomaly_risk,
 
                                 self.temporal_prediction
+                            )
+                        )
+
+                        fusion_state = (
+                            self.cognitive_fusion.process(
+
+                                self.predicted_emotion,
+                                self.prediction_confidence / 100,
+
+                                self.temporal_prediction,
+                                self.temporal_confidence / 100,
+
+                                self.stress_level,
+
+                                cognitive_load,
+
+                                deception_risk,
+
+                                self.anomaly_risk
+                            )
+                        )
+
+                        self.final_state = (
+                            fusion_state["cognitive_state"]
+                        )
+
+                        explanation = (
+                            self.cognitive_explainer.explain(
+
+                                self.blink_rate,
+
+                                gaze_stability,
+
+                                movement_score,
+
+                                cognitive_load,
+
+                                deception_risk
                             )
                         )
 
@@ -779,6 +907,47 @@ class VideoProcessor:
                         2
                     )
 
+                    cv2.putText(
+                        frame,
+                        f"Cognitive Fusion: "
+                        f"{self.final_state}",
+                        (500, 480),
+                        cv2.FONT_HERSHEY_SIMPLEX,
+                        0.7,
+                        (0, 255, 0),
+                        2
+                    )
+
+                    if len(explanation) > 0:
+
+                        cv2.putText(
+
+                            frame,
+
+                            explanation[0],
+
+                            (500, 520),
+
+                            cv2.FONT_HERSHEY_SIMPLEX,
+
+                            0.6,
+
+                            (255, 255, 255),
+
+                            2
+                        )
+
+                    cv2.putText(
+                        frame,
+                        f"Cognitive: "
+                        f"{cognitive_prediction['state']}",
+                        (500, 500),
+                        cv2.FONT_HERSHEY_SIMPLEX,
+                        0.8,
+                        (255,255,255),
+                        2
+                    )
+
             frame = self.facemesh.draw_landmarks(frame, results)
 
 
@@ -810,5 +979,24 @@ class VideoProcessor:
         for key, value in report.items():
 
             print(f"{key}: {value}")
+
+        summary = (
+            self.trend_analyzer.analyze(
+
+                self.emotion_history,
+
+                self.stress_history,
+
+                self.cognitive_history
+            )
+        )
+
+        print("\n===== SESSION TRENDS =====")
+
+        for key, value in summary.items():
+
+            print(
+                f"{key}: {value}"
+            )
 
         print("Camera stopped")
