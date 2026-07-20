@@ -1,0 +1,4608 @@
+{
+  "session_id": "session_20260709_093714",
+  "started_at": "2026-07-09 09:37:14",
+  "ended_at": "2026-07-09 09:38:53",
+  "frame_count": 184,
+  "frames": [
+    {
+      "timestamp": "2026-07-09 09:37:14",
+      "elapsed": 0.0,
+      "emotion": "unknown",
+      "visual_emotion": "unknown",
+      "fused_emotion": "unknown",
+      "stress": "LOW",
+      "audio_emotion": "neutral",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 0,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 0.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 0.0,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": "2026-07-09 09:37:16",
+      "elapsed": 2.07,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "neutral",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 0,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 6.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 3.0,
+      "confidence": 0.436
+    },
+    {
+      "timestamp": "2026-07-09 09:37:16",
+      "elapsed": 2.39,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "neutral",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 0,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 6.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 3.0,
+      "confidence": 0.414
+    },
+    {
+      "timestamp": "2026-07-09 09:37:16",
+      "elapsed": 2.77,
+      "emotion": "sad",
+      "visual_emotion": "sad",
+      "fused_emotion": "sad",
+      "stress": "LOW",
+      "audio_emotion": "neutral",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 0,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 8.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 15.0,
+      "confidence": 0.346
+    },
+    {
+      "timestamp": "2026-07-09 09:37:17",
+      "elapsed": 2.98,
+      "emotion": "sad",
+      "visual_emotion": "sad",
+      "fused_emotion": "sad",
+      "stress": "LOW",
+      "audio_emotion": "neutral",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 0,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 7.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 15.0,
+      "confidence": 0.367
+    },
+    {
+      "timestamp": "2026-07-09 09:37:17",
+      "elapsed": 3.31,
+      "emotion": "sad",
+      "visual_emotion": "sad",
+      "fused_emotion": "sad",
+      "stress": "MEDIUM",
+      "audio_emotion": "neutral",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 23.31,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 18.1,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 40.0,
+      "confidence": 0.174
+    },
+    {
+      "timestamp": "2026-07-09 09:37:17",
+      "elapsed": 3.54,
+      "emotion": "sad",
+      "visual_emotion": "sad",
+      "fused_emotion": "sad",
+      "stress": "MEDIUM",
+      "audio_emotion": "neutral",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 21.43,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 23.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 40.0,
+      "confidence": 0.177
+    },
+    {
+      "timestamp": "2026-07-09 09:37:17",
+      "elapsed": 3.89,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "neutral",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 20.04,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 27.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 28.0,
+      "confidence": 0.218
+    },
+    {
+      "timestamp": "2026-07-09 09:37:18",
+      "elapsed": 4.09,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "neutral",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 19.56,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 29.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 27.8,
+      "confidence": 0.241
+    },
+    {
+      "timestamp": "2026-07-09 09:37:27",
+      "elapsed": 13.23,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 19.48,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 30.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 27.7,
+      "confidence": 0.278
+    },
+    {
+      "timestamp": "2026-07-09 09:37:28",
+      "elapsed": 14.11,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 20.36,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 31.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 28.0,
+      "confidence": 0.298
+    },
+    {
+      "timestamp": "2026-07-09 09:37:28",
+      "elapsed": 14.51,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 20.26,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 31.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 28.0,
+      "confidence": 0.292
+    },
+    {
+      "timestamp": "2026-07-09 09:37:28",
+      "elapsed": 14.75,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 20.22,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 31.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 28.0,
+      "confidence": 0.294
+    },
+    {
+      "timestamp": "2026-07-09 09:37:29",
+      "elapsed": 15.1,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 20.0,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 31.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 28.0,
+      "confidence": 0.298
+    },
+    {
+      "timestamp": "2026-07-09 09:37:29",
+      "elapsed": 15.33,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 19.61,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 30.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 27.8,
+      "confidence": 0.288
+    },
+    {
+      "timestamp": "2026-07-09 09:37:29",
+      "elapsed": 15.68,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "MEDIUM",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 19.0,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 31.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 39.5,
+      "confidence": 0.267
+    },
+    {
+      "timestamp": "2026-07-09 09:37:29",
+      "elapsed": 15.92,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "MEDIUM",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 18.67,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 30.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 39.3,
+      "confidence": 0.274
+    },
+    {
+      "timestamp": "2026-07-09 09:37:30",
+      "elapsed": 16.27,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 18.41,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 23.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 12.2,
+      "confidence": 0.298
+    },
+    {
+      "timestamp": "2026-07-09 09:37:30",
+      "elapsed": 16.5,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 18.39,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.7,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 12.2,
+      "confidence": 0.296
+    },
+    {
+      "timestamp": "2026-07-09 09:37:31",
+      "elapsed": 17.43,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "LOW",
+      "audio_emotion": "disgust",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 18.25,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 24.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 39.1,
+      "confidence": 0.297
+    },
+    {
+      "timestamp": "2026-07-09 09:37:31",
+      "elapsed": 17.7,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "LOW",
+      "audio_emotion": "disgust",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 18.1,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 27.1,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 39.1,
+      "confidence": 0.288
+    },
+    {
+      "timestamp": "2026-07-09 09:37:32",
+      "elapsed": 18.07,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "disgust",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 18.18,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 21.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 12.1,
+      "confidence": 0.236
+    },
+    {
+      "timestamp": "2026-07-09 09:37:32",
+      "elapsed": 18.29,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "disgust",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 18.57,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 18.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 12.3,
+      "confidence": 0.244
+    },
+    {
+      "timestamp": "2026-07-09 09:37:32",
+      "elapsed": 18.62,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "disgust",
+      "audio_stress": "LOW",
+      "blink": 0,
+      "movement": 18.94,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 16.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 12.5,
+      "confidence": 0.243
+    },
+    {
+      "timestamp": "2026-07-09 09:37:32",
+      "elapsed": 18.83,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "disgust",
+      "audio_stress": "LOW",
+      "blink": 1,
+      "movement": 19.19,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 22.7,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 27.9,
+      "confidence": 0.238
+    },
+    {
+      "timestamp": "2026-07-09 09:37:33",
+      "elapsed": 19.16,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "LOW",
+      "audio_emotion": "disgust",
+      "audio_stress": "LOW",
+      "blink": 1,
+      "movement": 19.44,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 26.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 40.1,
+      "confidence": 0.157
+    },
+    {
+      "timestamp": "2026-07-09 09:37:33",
+      "elapsed": 19.39,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "LOW",
+      "audio_emotion": "disgust",
+      "audio_stress": "LOW",
+      "blink": 1,
+      "movement": 19.5,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 28.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 40.1,
+      "confidence": 0.17
+    },
+    {
+      "timestamp": "2026-07-09 09:37:33",
+      "elapsed": 19.72,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "disgust",
+      "audio_stress": "LOW",
+      "blink": 1,
+      "movement": 19.5,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 30.1,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 28.1,
+      "confidence": 0.25
+    },
+    {
+      "timestamp": "2026-07-09 09:37:34",
+      "elapsed": 19.95,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "disgust",
+      "audio_stress": "LOW",
+      "blink": 1,
+      "movement": 19.52,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 30.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 28.1,
+      "confidence": 0.248
+    },
+    {
+      "timestamp": "2026-07-09 09:37:34",
+      "elapsed": 20.92,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 1,
+      "movement": 19.55,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 37.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 40.6,
+      "confidence": 0.292
+    },
+    {
+      "timestamp": "2026-07-09 09:37:35",
+      "elapsed": 21.17,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 1,
+      "movement": 19.48,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 40.9,
+        "level": "MEDIUM",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 40.6,
+      "confidence": 0.287
+    },
+    {
+      "timestamp": "2026-07-09 09:37:35",
+      "elapsed": 21.51,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 1,
+      "movement": 19.71,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 43.2,
+        "level": "MEDIUM",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 40.7,
+      "confidence": 0.27
+    },
+    {
+      "timestamp": "2026-07-09 09:37:35",
+      "elapsed": 21.72,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 1,
+      "movement": 19.83,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 44.3,
+        "level": "MEDIUM",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 40.7,
+      "confidence": 0.281
+    },
+    {
+      "timestamp": "2026-07-09 09:37:36",
+      "elapsed": 22.08,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 1,
+      "movement": 18.76,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 44.8,
+        "level": "MEDIUM",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 40.2,
+      "confidence": 0.3
+    },
+    {
+      "timestamp": "2026-07-09 09:37:36",
+      "elapsed": 22.33,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 1,
+      "movement": 15.81,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 44.5,
+        "level": "MEDIUM",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 38.7,
+      "confidence": 0.319
+    },
+    {
+      "timestamp": "2026-07-09 09:37:36",
+      "elapsed": 22.83,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 1,
+      "movement": 12.63,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 36.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.1,
+      "confidence": 0.297
+    },
+    {
+      "timestamp": "2026-07-09 09:37:37",
+      "elapsed": 23.04,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 1,
+      "movement": 10.57,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 31.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.1,
+      "confidence": 0.298
+    },
+    {
+      "timestamp": "2026-07-09 09:37:37",
+      "elapsed": 23.37,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 1,
+      "movement": 9.3,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 27.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 20.5,
+      "confidence": 0.273
+    },
+    {
+      "timestamp": "2026-07-09 09:37:37",
+      "elapsed": 23.6,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 1,
+      "movement": 8.6,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 25.7,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 20.1,
+      "confidence": 0.279
+    },
+    {
+      "timestamp": "2026-07-09 09:37:38",
+      "elapsed": 24.48,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "happy",
+      "audio_stress": "MEDIUM",
+      "blink": 1,
+      "movement": 8.19,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 24.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 19.9,
+      "confidence": 0.299
+    },
+    {
+      "timestamp": "2026-07-09 09:37:38",
+      "elapsed": 24.74,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "happy",
+      "audio_stress": "MEDIUM",
+      "blink": 1,
+      "movement": 8.14,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 23.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 19.9,
+      "confidence": 0.305
+    },
+    {
+      "timestamp": "2026-07-09 09:37:39",
+      "elapsed": 25.09,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "happy",
+      "audio_stress": "MEDIUM",
+      "blink": 1,
+      "movement": 7.91,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 22.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 19.8,
+      "confidence": 0.187
+    },
+    {
+      "timestamp": "2026-07-09 09:37:39",
+      "elapsed": 25.31,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "happy",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 7.83,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 22.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 20.1,
+      "confidence": 0.192
+    },
+    {
+      "timestamp": "2026-07-09 09:37:39",
+      "elapsed": 25.7,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "happy",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 7.73,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 22.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 20.0,
+      "confidence": 0.305
+    },
+    {
+      "timestamp": "2026-07-09 09:37:40",
+      "elapsed": 25.94,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "happy",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 7.45,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 21.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 19.9,
+      "confidence": 0.302
+    },
+    {
+      "timestamp": "2026-07-09 09:37:40",
+      "elapsed": 26.3,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "happy",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 6.62,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 21.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 19.5,
+      "confidence": 0.294
+    },
+    {
+      "timestamp": "2026-07-09 09:37:40",
+      "elapsed": 26.53,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "happy",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 6.32,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 21.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 19.3,
+      "confidence": 0.298
+    },
+    {
+      "timestamp": "2026-07-09 09:37:40",
+      "elapsed": 26.9,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "happy",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 6.03,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 20.7,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 19.2,
+      "confidence": 0.295
+    },
+    {
+      "timestamp": "2026-07-09 09:37:41",
+      "elapsed": 27.11,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "happy",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 5.97,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 20.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 19.2,
+      "confidence": 0.294
+    },
+    {
+      "timestamp": "2026-07-09 09:37:42",
+      "elapsed": 27.98,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 5.87,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 19.1,
+      "confidence": 0.285
+    },
+    {
+      "timestamp": "2026-07-09 09:37:42",
+      "elapsed": 28.25,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 5.74,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 19.0,
+      "confidence": 0.287
+    },
+    {
+      "timestamp": "2026-07-09 09:37:42",
+      "elapsed": 28.62,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 5.76,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 19.0,
+      "confidence": 0.287
+    },
+    {
+      "timestamp": "2026-07-09 09:37:42",
+      "elapsed": 28.84,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 6.01,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 19.2,
+      "confidence": 0.27
+    },
+    {
+      "timestamp": "2026-07-09 09:37:43",
+      "elapsed": 29.2,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 6.26,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 26.4,
+        "level": "LOW",
+        "deception": "MEDIUM"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 46.3,
+      "confidence": 0.279
+    },
+    {
+      "timestamp": "2026-07-09 09:37:43",
+      "elapsed": 29.44,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 6.52,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 30.5,
+        "level": "LOW",
+        "deception": "MEDIUM"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 46.4,
+      "confidence": 0.265
+    },
+    {
+      "timestamp": "2026-07-09 09:37:43",
+      "elapsed": 29.77,
+      "emotion": "sad",
+      "visual_emotion": "sad",
+      "fused_emotion": "sad",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 6.48,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 33.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 46.4,
+      "confidence": 0.182
+    },
+    {
+      "timestamp": "2026-07-09 09:37:44",
+      "elapsed": 29.99,
+      "emotion": "sad",
+      "visual_emotion": "sad",
+      "fused_emotion": "sad",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 6.49,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 34.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 46.4,
+      "confidence": 0.185
+    },
+    {
+      "timestamp": "2026-07-09 09:37:44",
+      "elapsed": 30.32,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 6.55,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 35.7,
+        "level": "LOW",
+        "deception": "MEDIUM"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 46.4,
+      "confidence": 0.26
+    },
+    {
+      "timestamp": "2026-07-09 09:37:44",
+      "elapsed": 30.56,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 2,
+      "movement": 6.38,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 36.4,
+        "level": "LOW",
+        "deception": "MEDIUM"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 46.4,
+      "confidence": 0.244
+    },
+    {
+      "timestamp": "2026-07-09 09:37:45",
+      "elapsed": 31.45,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 2,
+      "movement": 6.03,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 23.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 6.7,
+      "confidence": 0.288
+    },
+    {
+      "timestamp": "2026-07-09 09:37:47",
+      "elapsed": 33.25,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 2,
+      "movement": 6.13,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 16.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 6.7,
+      "confidence": 0.289
+    },
+    {
+      "timestamp": "2026-07-09 09:37:47",
+      "elapsed": 33.83,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 2,
+      "movement": 6.23,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 11.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 6.8,
+      "confidence": 0.221
+    },
+    {
+      "timestamp": "2026-07-09 09:37:48",
+      "elapsed": 34.19,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 2,
+      "movement": 7.37,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 9.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 7.4,
+      "confidence": 0.202
+    },
+    {
+      "timestamp": "2026-07-09 09:37:48",
+      "elapsed": 34.6,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 2,
+      "movement": 9.15,
+      "gaze": {
+        "direction": "LEFT",
+        "stability": 0.98,
+        "shift_frequency": 1
+      },
+      "risk": {
+        "score": 8.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.4,
+      "confidence": 0.268
+    },
+    {
+      "timestamp": "2026-07-09 09:37:49",
+      "elapsed": 34.93,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 2,
+      "movement": 11.12,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 8.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 9.4,
+      "confidence": 0.263
+    },
+    {
+      "timestamp": "2026-07-09 09:37:49",
+      "elapsed": 35.51,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 2,
+      "movement": 11.06,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 8.1,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 9.4,
+      "confidence": 0.255
+    },
+    {
+      "timestamp": "2026-07-09 09:37:49",
+      "elapsed": 35.81,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 2,
+      "movement": 11.17,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 8.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 9.5,
+      "confidence": 0.267
+    },
+    {
+      "timestamp": "2026-07-09 09:37:50",
+      "elapsed": 36.29,
+      "emotion": "sad",
+      "visual_emotion": "sad",
+      "fused_emotion": "sad",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 2,
+      "movement": 11.41,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 15.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 36.6,
+      "confidence": 0.125
+    },
+    {
+      "timestamp": "2026-07-09 09:37:50",
+      "elapsed": 36.58,
+      "emotion": "sad",
+      "visual_emotion": "sad",
+      "fused_emotion": "sad",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 2,
+      "movement": 11.44,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 19.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 36.6,
+      "confidence": 0.122
+    },
+    {
+      "timestamp": "2026-07-09 09:37:51",
+      "elapsed": 37.51,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 2,
+      "movement": 11.46,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 15.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 9.6,
+      "confidence": 0.175
+    },
+    {
+      "timestamp": "2026-07-09 09:37:52",
+      "elapsed": 37.99,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 2,
+      "movement": 11.59,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 12.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 9.7,
+      "confidence": 0.171
+    },
+    {
+      "timestamp": "2026-07-09 09:37:52",
+      "elapsed": 38.52,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 2,
+      "movement": 11.68,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 11.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 9.7,
+      "confidence": 0.276
+    },
+    {
+      "timestamp": "2026-07-09 09:37:52",
+      "elapsed": 38.85,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 3,
+      "movement": 11.77,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 10.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.1,
+      "confidence": 0.268
+    },
+    {
+      "timestamp": "2026-07-09 09:37:53",
+      "elapsed": 39.3,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 3,
+      "movement": 11.86,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 10.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.1,
+      "confidence": 0.253
+    },
+    {
+      "timestamp": "2026-07-09 09:37:53",
+      "elapsed": 39.62,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 3,
+      "movement": 11.97,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 9.7,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.2,
+      "confidence": 0.247
+    },
+    {
+      "timestamp": "2026-07-09 09:37:54",
+      "elapsed": 40.05,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 3,
+      "movement": 12.12,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 9.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.3,
+      "confidence": 0.219
+    },
+    {
+      "timestamp": "2026-07-09 09:37:54",
+      "elapsed": 40.38,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 3,
+      "movement": 12.23,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 9.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.3,
+      "confidence": 0.222
+    },
+    {
+      "timestamp": "2026-07-09 09:37:54",
+      "elapsed": 40.84,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 3,
+      "movement": 12.24,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 9.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.3,
+      "confidence": 0.28
+    },
+    {
+      "timestamp": "2026-07-09 09:37:55",
+      "elapsed": 41.14,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 3,
+      "movement": 12.26,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 9.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.3,
+      "confidence": 0.283
+    },
+    {
+      "timestamp": "2026-07-09 09:37:56",
+      "elapsed": 42.02,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 3,
+      "movement": 12.3,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 15.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.9,
+      "confidence": 0.287
+    },
+    {
+      "timestamp": "2026-07-09 09:37:56",
+      "elapsed": 42.38,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 3,
+      "movement": 12.39,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 19.1,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.9,
+      "confidence": 0.285
+    },
+    {
+      "timestamp": "2026-07-09 09:37:56",
+      "elapsed": 42.83,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 3,
+      "movement": 12.46,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 21.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.9,
+      "confidence": 0.184
+    },
+    {
+      "timestamp": "2026-07-09 09:37:57",
+      "elapsed": 43.14,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 3,
+      "movement": 12.45,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 22.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.9,
+      "confidence": 0.182
+    },
+    {
+      "timestamp": "2026-07-09 09:37:57",
+      "elapsed": 43.59,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 3,
+      "movement": 12.38,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 23.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.9,
+      "confidence": 0.273
+    },
+    {
+      "timestamp": "2026-07-09 09:37:57",
+      "elapsed": 43.89,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 3,
+      "movement": 12.34,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 23.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.9,
+      "confidence": 0.26
+    },
+    {
+      "timestamp": "2026-07-09 09:37:58",
+      "elapsed": 44.31,
+      "emotion": "happy",
+      "visual_emotion": "happy",
+      "fused_emotion": "happy",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 4,
+      "movement": 12.27,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 23.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 20.2,
+      "confidence": 0.295
+    },
+    {
+      "timestamp": "2026-07-09 09:37:58",
+      "elapsed": 44.62,
+      "emotion": "happy",
+      "visual_emotion": "happy",
+      "fused_emotion": "happy",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 4,
+      "movement": 12.23,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 23.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 20.1,
+      "confidence": 0.29
+    },
+    {
+      "timestamp": "2026-07-09 09:37:59",
+      "elapsed": 45.07,
+      "emotion": "happy",
+      "visual_emotion": "happy",
+      "fused_emotion": "happy",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 4,
+      "movement": 12.2,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 23.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 20.1,
+      "confidence": 0.281
+    },
+    {
+      "timestamp": "2026-07-09 09:37:59",
+      "elapsed": 45.36,
+      "emotion": "happy",
+      "visual_emotion": "happy",
+      "fused_emotion": "happy",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 4,
+      "movement": 12.27,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 23.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 20.2,
+      "confidence": 0.279
+    },
+    {
+      "timestamp": "2026-07-09 09:38:00",
+      "elapsed": 46.2,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 4,
+      "movement": 12.36,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 30.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 38.2,
+      "confidence": 0.24
+    },
+    {
+      "timestamp": "2026-07-09 09:38:00",
+      "elapsed": 46.55,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 4,
+      "movement": 12.67,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 34.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 38.4,
+      "confidence": 0.241
+    },
+    {
+      "timestamp": "2026-07-09 09:38:01",
+      "elapsed": 46.98,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "MEDIUM",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 4,
+      "movement": 12.85,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 37.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 38.5,
+      "confidence": 0.096
+    },
+    {
+      "timestamp": "2026-07-09 09:38:01",
+      "elapsed": 47.26,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 4,
+      "movement": 12.22,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 31.7,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 23.1,
+      "confidence": 0.1
+    },
+    {
+      "timestamp": "2026-07-09 09:38:01",
+      "elapsed": 47.68,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 4,
+      "movement": 10.67,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 28.1,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.4,
+      "confidence": 0.28
+    },
+    {
+      "timestamp": "2026-07-09 09:38:02",
+      "elapsed": 47.98,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 7.55,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 25.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.1,
+      "confidence": 0.274
+    },
+    {
+      "timestamp": "2026-07-09 09:38:02",
+      "elapsed": 48.4,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 7.73,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 23.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.2,
+      "confidence": 0.247
+    },
+    {
+      "timestamp": "2026-07-09 09:38:02",
+      "elapsed": 48.72,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 9.64,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 22.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.2,
+      "confidence": 0.219
+    },
+    {
+      "timestamp": "2026-07-09 09:38:03",
+      "elapsed": 49.13,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 9.43,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 22.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.1,
+      "confidence": 0.234
+    },
+    {
+      "timestamp": "2026-07-09 09:38:03",
+      "elapsed": 49.42,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 9.36,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 21.7,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.0,
+      "confidence": 0.24
+    },
+    {
+      "timestamp": "2026-07-09 09:38:04",
+      "elapsed": 50.46,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 9.29,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 21.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.0,
+      "confidence": 0.246
+    },
+    {
+      "timestamp": "2026-07-09 09:38:04",
+      "elapsed": 50.81,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 9.19,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 21.1,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.0,
+      "confidence": 0.228
+    },
+    {
+      "timestamp": "2026-07-09 09:38:05",
+      "elapsed": 51.22,
+      "emotion": "sad",
+      "visual_emotion": "sad",
+      "fused_emotion": "fear",
+      "stress": "MEDIUM",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 9.21,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 28.2,
+        "level": "LOW",
+        "deception": "MEDIUM"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 49.0,
+      "confidence": 0.166
+    },
+    {
+      "timestamp": "2026-07-09 09:38:05",
+      "elapsed": 51.51,
+      "emotion": "sad",
+      "visual_emotion": "sad",
+      "fused_emotion": "fear",
+      "stress": "MEDIUM",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 9.28,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 32.5,
+        "level": "LOW",
+        "deception": "MEDIUM"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 49.0,
+      "confidence": 0.166
+    },
+    {
+      "timestamp": "2026-07-09 09:38:06",
+      "elapsed": 51.93,
+      "emotion": "sad",
+      "visual_emotion": "sad",
+      "fused_emotion": "sad",
+      "stress": "MEDIUM",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 9.4,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 35.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 49.1,
+      "confidence": 0.189
+    },
+    {
+      "timestamp": "2026-07-09 09:38:06",
+      "elapsed": 52.22,
+      "emotion": "sad",
+      "visual_emotion": "sad",
+      "fused_emotion": "sad",
+      "stress": "MEDIUM",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 9.52,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 37.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 49.1,
+      "confidence": 0.195
+    },
+    {
+      "timestamp": "2026-07-09 09:38:06",
+      "elapsed": 52.65,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 9.87,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 31.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.3,
+      "confidence": 0.235
+    },
+    {
+      "timestamp": "2026-07-09 09:38:07",
+      "elapsed": 52.94,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 10.25,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 27.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.5,
+      "confidence": 0.246
+    },
+    {
+      "timestamp": "2026-07-09 09:38:07",
+      "elapsed": 53.35,
+      "emotion": "surprise",
+      "visual_emotion": "surprise",
+      "fused_emotion": "surprise",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 10.65,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 26.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 19.7,
+      "confidence": 0.212
+    },
+    {
+      "timestamp": "2026-07-09 09:38:07",
+      "elapsed": 53.66,
+      "emotion": "surprise",
+      "visual_emotion": "surprise",
+      "fused_emotion": "surprise",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 10.81,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 25.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 19.8,
+      "confidence": 0.206
+    },
+    {
+      "timestamp": "2026-07-09 09:38:08",
+      "elapsed": 54.65,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 10.72,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 24.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.7,
+      "confidence": 0.245
+    },
+    {
+      "timestamp": "2026-07-09 09:38:09",
+      "elapsed": 55.0,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 10.81,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 24.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.8,
+      "confidence": 0.255
+    },
+    {
+      "timestamp": "2026-07-09 09:38:09",
+      "elapsed": 55.45,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 10.88,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 24.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.8,
+      "confidence": 0.26
+    },
+    {
+      "timestamp": "2026-07-09 09:38:09",
+      "elapsed": 55.77,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 10.98,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 24.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.9,
+      "confidence": 0.264
+    },
+    {
+      "timestamp": "2026-07-09 09:38:10",
+      "elapsed": 56.24,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 11.11,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 24.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 22.9,
+      "confidence": 0.232
+    },
+    {
+      "timestamp": "2026-07-09 09:38:10",
+      "elapsed": 56.59,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 11.24,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 24.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 23.0,
+      "confidence": 0.228
+    },
+    {
+      "timestamp": "2026-07-09 09:38:11",
+      "elapsed": 57.04,
+      "emotion": "sad",
+      "visual_emotion": "sad",
+      "fused_emotion": "fear",
+      "stress": "MEDIUM",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 11.34,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 31.3,
+        "level": "LOW",
+        "deception": "MEDIUM"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 50.0,
+      "confidence": 0.123
+    },
+    {
+      "timestamp": "2026-07-09 09:38:11",
+      "elapsed": 57.38,
+      "emotion": "sad",
+      "visual_emotion": "sad",
+      "fused_emotion": "fear",
+      "stress": "MEDIUM",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 5,
+      "movement": 11.39,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 35.6,
+        "level": "LOW",
+        "deception": "MEDIUM"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 50.1,
+      "confidence": 0.123
+    },
+    {
+      "timestamp": "2026-07-09 09:38:11",
+      "elapsed": 57.8,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 6,
+      "movement": 11.4,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 31.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 23.4,
+      "confidence": 0.248
+    },
+    {
+      "timestamp": "2026-07-09 09:38:12",
+      "elapsed": 58.1,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "MEDIUM",
+      "blink": 6,
+      "movement": 11.39,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 28.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 23.4,
+      "confidence": 0.253
+    },
+    {
+      "timestamp": "2026-07-09 09:38:13",
+      "elapsed": 59.01,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 11.37,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 21.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.9,
+      "confidence": 0.286
+    },
+    {
+      "timestamp": "2026-07-09 09:38:13",
+      "elapsed": 59.33,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 11.19,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 16.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.8,
+      "confidence": 0.297
+    },
+    {
+      "timestamp": "2026-07-09 09:38:13",
+      "elapsed": 59.76,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 11.04,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 2
+      },
+      "risk": {
+        "score": 13.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.7,
+      "confidence": 0.292
+    },
+    {
+      "timestamp": "2026-07-09 09:38:14",
+      "elapsed": 60.06,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 11.24,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 0.98,
+        "shift_frequency": 1
+      },
+      "risk": {
+        "score": 11.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.8,
+      "confidence": 0.3
+    },
+    {
+      "timestamp": "2026-07-09 09:38:14",
+      "elapsed": 60.42,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 11.27,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 10.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.6,
+      "confidence": 0.297
+    },
+    {
+      "timestamp": "2026-07-09 09:38:14",
+      "elapsed": 60.68,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 11.19,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 10.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.6,
+      "confidence": 0.297
+    },
+    {
+      "timestamp": "2026-07-09 09:38:15",
+      "elapsed": 61.09,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 11.07,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 9.7,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.5,
+      "confidence": 0.256
+    },
+    {
+      "timestamp": "2026-07-09 09:38:15",
+      "elapsed": 61.44,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 9.03,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 9.1,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 9.5,
+      "confidence": 0.255
+    },
+    {
+      "timestamp": "2026-07-09 09:38:15",
+      "elapsed": 61.88,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 8.23,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 8.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 9.1,
+      "confidence": 0.297
+    },
+    {
+      "timestamp": "2026-07-09 09:38:16",
+      "elapsed": 62.2,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 7.7,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 8.1,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.9,
+      "confidence": 0.301
+    },
+    {
+      "timestamp": "2026-07-09 09:38:17",
+      "elapsed": 63.15,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 7.4,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 7.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.7,
+      "confidence": 0.294
+    },
+    {
+      "timestamp": "2026-07-09 09:38:17",
+      "elapsed": 63.48,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 7.11,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 7.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.6,
+      "confidence": 0.297
+    },
+    {
+      "timestamp": "2026-07-09 09:38:18",
+      "elapsed": 63.93,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 7.32,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 7.1,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.7,
+      "confidence": 0.301
+    },
+    {
+      "timestamp": "2026-07-09 09:38:18",
+      "elapsed": 64.21,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 7.3,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 6.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.6,
+      "confidence": 0.293
+    },
+    {
+      "timestamp": "2026-07-09 09:38:18",
+      "elapsed": 64.63,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 7.12,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 6.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.6,
+      "confidence": 0.295
+    },
+    {
+      "timestamp": "2026-07-09 09:38:19",
+      "elapsed": 64.95,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 7.12,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 6.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.6,
+      "confidence": 0.286
+    },
+    {
+      "timestamp": "2026-07-09 09:38:19",
+      "elapsed": 65.35,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 6,
+      "movement": 7.02,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 6.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.5,
+      "confidence": 0.142
+    },
+    {
+      "timestamp": "2026-07-09 09:38:19",
+      "elapsed": 65.69,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 7,
+      "movement": 6.78,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 5.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.7,
+      "confidence": 0.15
+    },
+    {
+      "timestamp": "2026-07-09 09:38:20",
+      "elapsed": 66.14,
+      "emotion": "angry",
+      "visual_emotion": "angry",
+      "fused_emotion": "angry",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 7,
+      "movement": 6.54,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 12.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 35.6,
+      "confidence": 0.365
+    },
+    {
+      "timestamp": "2026-07-09 09:38:20",
+      "elapsed": 66.46,
+      "emotion": "angry",
+      "visual_emotion": "angry",
+      "fused_emotion": "angry",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 7,
+      "movement": 6.53,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 16.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 35.6,
+      "confidence": 0.361
+    },
+    {
+      "timestamp": "2026-07-09 09:38:21",
+      "elapsed": 67.4,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 7,
+      "movement": 6.53,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 18.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.1,
+      "confidence": 0.287
+    },
+    {
+      "timestamp": "2026-07-09 09:38:21",
+      "elapsed": 67.77,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 7,
+      "movement": 6.58,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.1,
+      "confidence": 0.281
+    },
+    {
+      "timestamp": "2026-07-09 09:38:22",
+      "elapsed": 68.21,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 7,
+      "movement": 6.58,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.1,
+      "confidence": 0.285
+    },
+    {
+      "timestamp": "2026-07-09 09:38:22",
+      "elapsed": 68.53,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 7,
+      "movement": 6.66,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.2,
+      "confidence": 0.286
+    },
+    {
+      "timestamp": "2026-07-09 09:38:23",
+      "elapsed": 68.99,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 7,
+      "movement": 6.7,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 20.1,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.2,
+      "confidence": 0.116
+    },
+    {
+      "timestamp": "2026-07-09 09:38:23",
+      "elapsed": 69.33,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 7,
+      "movement": 6.59,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 20.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.1,
+      "confidence": 0.117
+    },
+    {
+      "timestamp": "2026-07-09 09:38:23",
+      "elapsed": 69.74,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 7,
+      "movement": 6.41,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.0,
+      "confidence": 0.228
+    },
+    {
+      "timestamp": "2026-07-09 09:38:24",
+      "elapsed": 70.05,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 7,
+      "movement": 6.48,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.1,
+      "confidence": 0.227
+    },
+    {
+      "timestamp": "2026-07-09 09:38:24",
+      "elapsed": 70.9,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 7,
+      "movement": 6.42,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.0,
+      "confidence": 0.227
+    },
+    {
+      "timestamp": "2026-07-09 09:38:25",
+      "elapsed": 71.51,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "MEDIUM",
+      "blink": 7,
+      "movement": 6.27,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.0,
+      "confidence": 0.237
+    },
+    {
+      "timestamp": "2026-07-09 09:38:26",
+      "elapsed": 72.7,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 7,
+      "movement": 6.06,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 20.9,
+      "confidence": 0.292
+    },
+    {
+      "timestamp": "2026-07-09 09:38:27",
+      "elapsed": 73.05,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 7,
+      "movement": 5.86,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.1,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 20.8,
+      "confidence": 0.294
+    },
+    {
+      "timestamp": "2026-07-09 09:38:27",
+      "elapsed": 73.52,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 8,
+      "movement": 5.73,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.0,
+      "confidence": 0.269
+    },
+    {
+      "timestamp": "2026-07-09 09:38:27",
+      "elapsed": 73.79,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 8,
+      "movement": 5.41,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 18.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 20.9,
+      "confidence": 0.278
+    },
+    {
+      "timestamp": "2026-07-09 09:38:28",
+      "elapsed": 74.24,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 8,
+      "movement": 5.37,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 18.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 20.9,
+      "confidence": 0.244
+    },
+    {
+      "timestamp": "2026-07-09 09:38:28",
+      "elapsed": 74.6,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 9,
+      "movement": 5.44,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 18.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.2,
+      "confidence": 0.244
+    },
+    {
+      "timestamp": "2026-07-09 09:38:29",
+      "elapsed": 75.06,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 9,
+      "movement": 5.56,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 18.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.3,
+      "confidence": 0.277
+    },
+    {
+      "timestamp": "2026-07-09 09:38:29",
+      "elapsed": 75.4,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 9,
+      "movement": 5.54,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 18.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.3,
+      "confidence": 0.275
+    },
+    {
+      "timestamp": "2026-07-09 09:38:29",
+      "elapsed": 75.86,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 9,
+      "movement": 5.48,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 18.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.2,
+      "confidence": 0.295
+    },
+    {
+      "timestamp": "2026-07-09 09:38:30",
+      "elapsed": 76.17,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "sad",
+      "audio_stress": "MEDIUM",
+      "blink": 9,
+      "movement": 5.39,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 18.7,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 21.2,
+      "confidence": 0.291
+    },
+    {
+      "timestamp": "2026-07-09 09:38:31",
+      "elapsed": 77.04,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 9,
+      "movement": 5.41,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 12.7,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.7,
+      "confidence": 0.294
+    },
+    {
+      "timestamp": "2026-07-09 09:38:31",
+      "elapsed": 77.39,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 9,
+      "movement": 5.52,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 9.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.8,
+      "confidence": 0.298
+    },
+    {
+      "timestamp": "2026-07-09 09:38:31",
+      "elapsed": 77.86,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 9,
+      "movement": 5.63,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 7.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.8,
+      "confidence": 0.231
+    },
+    {
+      "timestamp": "2026-07-09 09:38:32",
+      "elapsed": 78.19,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 9,
+      "movement": 5.75,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 5.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.9,
+      "confidence": 0.225
+    },
+    {
+      "timestamp": "2026-07-09 09:38:32",
+      "elapsed": 78.67,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 9,
+      "movement": 5.75,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 5.0,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.9,
+      "confidence": 0.275
+    },
+    {
+      "timestamp": "2026-07-09 09:38:33",
+      "elapsed": 79.01,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 9,
+      "movement": 5.74,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 4.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 8.9,
+      "confidence": 0.283
+    },
+    {
+      "timestamp": "2026-07-09 09:38:33",
+      "elapsed": 79.46,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 10,
+      "movement": 5.68,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 4.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 9.2,
+      "confidence": 0.29
+    },
+    {
+      "timestamp": "2026-07-09 09:38:33",
+      "elapsed": 79.79,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 10,
+      "movement": 5.65,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 3.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 9.2,
+      "confidence": 0.292
+    },
+    {
+      "timestamp": "2026-07-09 09:38:34",
+      "elapsed": 80.24,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 10,
+      "movement": 5.63,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 10.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 36.1,
+      "confidence": 0.316
+    },
+    {
+      "timestamp": "2026-07-09 09:38:34",
+      "elapsed": 80.58,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 10,
+      "movement": 5.67,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 14.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 36.2,
+      "confidence": 0.32
+    },
+    {
+      "timestamp": "2026-07-09 09:38:35",
+      "elapsed": 81.57,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 10,
+      "movement": 6.07,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 17.3,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 36.4,
+      "confidence": 0.299
+    },
+    {
+      "timestamp": "2026-07-09 09:38:36",
+      "elapsed": 81.97,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 10,
+      "movement": 6.43,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 18.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 36.5,
+      "confidence": 0.298
+    },
+    {
+      "timestamp": "2026-07-09 09:38:36",
+      "elapsed": 82.44,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 10,
+      "movement": 7.08,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 36.9,
+      "confidence": 0.178
+    },
+    {
+      "timestamp": "2026-07-09 09:38:36",
+      "elapsed": 82.79,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 10,
+      "movement": 7.29,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 20.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 37.0,
+      "confidence": 0.178
+    },
+    {
+      "timestamp": "2026-07-09 09:38:37",
+      "elapsed": 83.21,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 11,
+      "movement": 7.03,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 21.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 25.2,
+      "confidence": 0.279
+    },
+    {
+      "timestamp": "2026-07-09 09:38:37",
+      "elapsed": 83.54,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 11,
+      "movement": 6.84,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 14.5,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.1,
+      "confidence": 0.282
+    },
+    {
+      "timestamp": "2026-07-09 09:38:38",
+      "elapsed": 83.98,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 11,
+      "movement": 6.88,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 17.7,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 37.1,
+      "confidence": 0.291
+    },
+    {
+      "timestamp": "2026-07-09 09:38:38",
+      "elapsed": 84.3,
+      "emotion": "fear",
+      "visual_emotion": "fear",
+      "fused_emotion": "fear",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 11,
+      "movement": 7.08,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 19.6,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "MEDIUM",
+      "fusion_score": 37.2,
+      "confidence": 0.3
+    },
+    {
+      "timestamp": "2026-07-09 09:38:38",
+      "elapsed": 84.74,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 11,
+      "movement": 7.4,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 14.1,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.4,
+      "confidence": 0.294
+    },
+    {
+      "timestamp": "2026-07-09 09:38:39",
+      "elapsed": 85.05,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "angry",
+      "audio_stress": "LOW",
+      "blink": 11,
+      "movement": 7.63,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 10.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.5,
+      "confidence": 0.298
+    },
+    {
+      "timestamp": "2026-07-09 09:38:40",
+      "elapsed": 85.98,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 11,
+      "movement": 7.67,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 8.9,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.5,
+      "confidence": 0.247
+    },
+    {
+      "timestamp": "2026-07-09 09:38:40",
+      "elapsed": 86.34,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 11,
+      "movement": 8.25,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 7.8,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.8,
+      "confidence": 0.243
+    },
+    {
+      "timestamp": "2026-07-09 09:38:40",
+      "elapsed": 86.73,
+      "emotion": "surprise",
+      "visual_emotion": "surprise",
+      "fused_emotion": "surprise",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 11,
+      "movement": 8.41,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 7.4,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 7.9,
+      "confidence": 0.25
+    },
+    {
+      "timestamp": "2026-07-09 09:38:41",
+      "elapsed": 87.02,
+      "emotion": "surprise",
+      "visual_emotion": "surprise",
+      "fused_emotion": "surprise",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 11,
+      "movement": 8.42,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 7.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 7.9,
+      "confidence": 0.26
+    },
+    {
+      "timestamp": "2026-07-09 09:38:41",
+      "elapsed": 87.49,
+      "emotion": "neutral",
+      "visual_emotion": "neutral",
+      "fused_emotion": "neutral",
+      "stress": "LOW",
+      "audio_emotion": "fear",
+      "audio_stress": "LOW",
+      "blink": 11,
+      "movement": 8.3,
+      "gaze": {
+        "direction": "CENTER",
+        "stability": 1.0,
+        "shift_frequency": 0
+      },
+      "risk": {
+        "score": 7.2,
+        "level": "LOW",
+        "deception": "LOW"
+      },
+      "cognitive_load": "LOW",
+      "fusion_score": 10.8,
+      "confidence": 0.294
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+{
+  "session_id": "session_20260708_203429",
+  "started_at": "2026-07-08 20:34:29",
+  "ended_at": "2026-07-08 20:36:56",
+  "frame_count": 176,
+  "duration_seconds": 123.8,
+  "duration": "02:04",
+  "stress": {
+    "average_percent": 14.5,
+    "average_level": "LOW",
+    "highest_level": "MEDIUM",
+    "highest_at": "00:22",
+    "distribution": {
+      "LOW": 125,
+      "MEDIUM": 51,
+      "HIGH": 0
+    }
+  },
+  "emotion": {
+    "dominant": "neutral",
+    "distribution": {
+      "neutral": 69,
+      "fear": 60,
+      "happy": 24,
+      "sad": 14,
+      "surprise": 4,
+      "angry": 4,
+      "unknown": 1
+    },
+    "stability_percent": 65.7,
+    "timeline": [
+      {
+        "time": "00:00",
+        "emotion": "unknown"
+      },
+      {
+        "time": "00:03",
+        "emotion": "happy"
+      },
+      {
+        "time": "00:04",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:05",
+        "emotion": "happy"
+      },
+      {
+        "time": "00:06",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:17",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:19",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:20",
+        "emotion": "surprise"
+      },
+      {
+        "time": "00:21",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:23",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:26",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:30",
+        "emotion": "surprise"
+      },
+      {
+        "time": "00:32",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:33",
+        "emotion": "happy"
+      },
+      {
+        "time": "00:34",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:36",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:39",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:40",
+        "emotion": "happy"
+      },
+      {
+        "time": "00:41",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:43",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:50",
+        "emotion": "happy"
+      },
+      {
+        "time": "00:51",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:54",
+        "emotion": "happy"
+      },
+      {
+        "time": "00:57",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:59",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:01",
+        "emotion": "happy"
+      },
+      {
+        "time": "01:02",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:03",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:04",
+        "emotion": "angry"
+      },
+      {
+        "time": "01:06",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:08",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:10",
+        "emotion": "happy"
+      },
+      {
+        "time": "01:11",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:15",
+        "emotion": "happy"
+      },
+      {
+        "time": "01:17",
+        "emotion": "angry"
+      },
+      {
+        "time": "01:18",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:21",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:22",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:23",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:24",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:27",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:28",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:30",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:31",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:34",
+        "emotion": "happy"
+      },
+      {
+        "time": "01:35",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:36",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:38",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:39",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:40",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:42",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:47",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:48",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:50",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:52",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:53",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:56",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:57",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:58",
+        "emotion": "neutral"
+      },
+      {
+        "time": "02:00",
+        "emotion": "happy"
+      },
+      {
+        "time": "02:01",
+        "emotion": "neutral"
+      }
+    ]
+  },
+  "risk": {
+    "average_score": 25.8,
+    "highest_score": 40.1,
+    "highest_at": "01:08",
+    "dominant_level": "LOW",
+    "final_deception": "LOW",
+    "distribution": {
+      "LOW": 173,
+      "MEDIUM": 3,
+      "HIGH": 0
+    },
+    "timeline": [
+      {
+        "time": "00:00",
+        "level": "LOW",
+        "score": 0
+      },
+      {
+        "time": "01:08",
+        "level": "MEDIUM",
+        "score": 40.0
+      },
+      {
+        "time": "01:09",
+        "level": "LOW",
+        "score": 32.9
+      }
+    ]
+  },
+  "blink": {
+    "total": 15,
+    "per_minute": 7.3
+  },
+  "gaze": {
+    "average_stability_percent": 100.0,
+    "avoidance_percent": 0.0
+  },
+  "summary": "Candidate appeared 'neutral' for about 39% of the 02:04 session. Average stress was LOW (14.5%), peaking at MEDIUM around 00:22. Overall deception risk was LOW (avg 25.8/100, peak 40.1 at 01:08).",
+  "recommendations": [
+    "Candidate remained calm and stable throughout, with low deception indicators across all modalities."
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "session_id": "session_20260707_184551",
+  "started_at": "2026-07-07 18:45:51",
+  "ended_at": "2026-07-07 18:48:44",
+  "frame_count": 217,
+  "duration_seconds": 128.2,
+  "duration": "02:08",
+  "stress": {
+    "average_percent": 41.5,
+    "average_level": "MEDIUM",
+    "highest_level": "HIGH",
+    "highest_at": "01:38",
+    "distribution": {
+      "LOW": 94,
+      "MEDIUM": 66,
+      "HIGH": 57
+    }
+  },
+  "emotion": {
+    "dominant": "neutral",
+    "distribution": {
+      "neutral": 121,
+      "sad": 41,
+      "angry": 25,
+      "fear": 24,
+      "surprise": 3,
+      "happy": 2,
+      "unknown": 1
+    },
+    "stability_percent": 66.7,
+    "timeline": [
+      {
+        "time": "00:00",
+        "emotion": "unknown"
+      },
+      {
+        "time": "00:02",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:03",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:06",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:16",
+        "emotion": "angry"
+      },
+      {
+        "time": "00:17",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:18",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:33",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:33",
+        "emotion": "angry"
+      },
+      {
+        "time": "00:34",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:35",
+        "emotion": "angry"
+      },
+      {
+        "time": "00:41",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:44",
+        "emotion": "angry"
+      },
+      {
+        "time": "00:44",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:45",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:46",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:47",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:49",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:49",
+        "emotion": "angry"
+      },
+      {
+        "time": "00:50",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:52",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:54",
+        "emotion": "surprise"
+      },
+      {
+        "time": "00:55",
+        "emotion": "happy"
+      },
+      {
+        "time": "00:55",
+        "emotion": "surprise"
+      },
+      {
+        "time": "00:55",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:56",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:59",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:01",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:01",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:03",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:04",
+        "emotion": "happy"
+      },
+      {
+        "time": "01:05",
+        "emotion": "angry"
+      },
+      {
+        "time": "01:06",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:07",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:09",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:10",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:11",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:12",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:13",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:31",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:32",
+        "emotion": "angry"
+      },
+      {
+        "time": "01:32",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:35",
+        "emotion": "angry"
+      },
+      {
+        "time": "01:36",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:37",
+        "emotion": "angry"
+      },
+      {
+        "time": "01:38",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:40",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:41",
+        "emotion": "surprise"
+      },
+      {
+        "time": "01:41",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:42",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:43",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:44",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:45",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:45",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:50",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:50",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:51",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:53",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:54",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:55",
+        "emotion": "sad"
+      },
+      {
+        "time": "01:57",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:57",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:58",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:59",
+        "emotion": "fear"
+      },
+      {
+        "time": "02:00",
+        "emotion": "sad"
+      },
+      {
+        "time": "02:00",
+        "emotion": "neutral"
+      },
+      {
+        "time": "02:01",
+        "emotion": "fear"
+      },
+      {
+        "time": "02:02",
+        "emotion": "neutral"
+      },
+      {
+        "time": "02:04",
+        "emotion": "fear"
+      },
+      {
+        "time": "02:05",
+        "emotion": "neutral"
+      },
+      {
+        "time": "02:06",
+        "emotion": "fear"
+      },
+      {
+        "time": "02:07",
+        "emotion": "sad"
+      },
+      {
+        "time": "02:08",
+        "emotion": "angry"
+      }
+    ]
+  },
+  "risk": {
+    "average_score": 20.4,
+    "highest_score": 44.6,
+    "highest_at": "01:47",
+    "dominant_level": "LOW",
+    "final_deception": "MEDIUM",
+    "distribution": {
+      "LOW": 166,
+      "MEDIUM": 51,
+      "HIGH": 0
+    },
+    "timeline": [
+      {
+        "time": "00:00",
+        "level": "LOW",
+        "score": 0
+      },
+      {
+        "time": "01:42",
+        "level": "MEDIUM",
+        "score": 40.2
+      }
+    ]
+  },
+  "blink": {
+    "total": 23,
+    "per_minute": 10.8
+  },
+  "gaze": {
+    "average_stability_percent": 100.0,
+    "avoidance_percent": 0.0
+  },
+  "summary": "Candidate appeared 'neutral' for about 56% of the 02:08 session. Average stress was MEDIUM (41.5%), peaking at HIGH around 01:38. Overall deception risk was LOW (avg 20.4/100, peak 44.6 at 01:47).",
+  "recommendations": [
+    "Candidate remained calm and stable throughout, with low deception indicators across all modalities."
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "session_id": "session_20260708_152443",
+  "started_at": "2026-07-08 15:24:46",
+  "ended_at": "2026-07-08 15:26:21",
+  "frame_count": 131,
+  "duration_seconds": 73.4,
+  "duration": "01:13",
+  "stress": {
+    "average_percent": 0.0,
+    "average_level": "LOW",
+    "highest_level": "LOW",
+    "highest_at": "00:00",
+    "distribution": {
+      "LOW": 131,
+      "MEDIUM": 0,
+      "HIGH": 0
+    }
+  },
+  "emotion": {
+    "dominant": "angry",
+    "distribution": {
+      "angry": 96,
+      "neutral": 24,
+      "sad": 9,
+      "happy": 2
+    },
+    "stability_percent": 88.5,
+    "timeline": [
+      {
+        "time": "00:00",
+        "emotion": "angry"
+      },
+      {
+        "time": "00:01",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:03",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:14",
+        "emotion": "angry"
+      },
+      {
+        "time": "00:25",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:26",
+        "emotion": "angry"
+      },
+      {
+        "time": "00:36",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:37",
+        "emotion": "angry"
+      },
+      {
+        "time": "00:48",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:48",
+        "emotion": "angry"
+      },
+      {
+        "time": "00:59",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:00",
+        "emotion": "angry"
+      },
+      {
+        "time": "01:02",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:09",
+        "emotion": "happy"
+      },
+      {
+        "time": "01:10",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:13",
+        "emotion": "sad"
+      }
+    ]
+  },
+  "risk": {
+    "average_score": 4.0,
+    "highest_score": 6.4,
+    "highest_at": "00:16",
+    "dominant_level": "LOW",
+    "final_deception": "LOW",
+    "distribution": {
+      "LOW": 131,
+      "MEDIUM": 0,
+      "HIGH": 0
+    },
+    "timeline": [
+      {
+        "time": "00:00",
+        "level": "LOW",
+        "score": 0
+      }
+    ]
+  },
+  "blink": {
+    "total": 6,
+    "per_minute": 4.9
+  },
+  "gaze": {
+    "average_stability_percent": 98.9,
+    "avoidance_percent": 1.1
+  },
+  "summary": "Candidate appeared 'angry' for about 73% of the 01:13 session. Average stress was LOW (0.0%), peaking at LOW around 00:00. Overall deception risk was LOW (avg 4.0/100, peak 6.4 at 00:16).",
+  "recommendations": [
+    "Candidate remained calm and stable throughout, with low deception indicators across all modalities."
+  ]
+}

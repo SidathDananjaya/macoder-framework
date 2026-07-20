@@ -1,0 +1,36 @@
+{
+  "n_samples": 1200,
+  "n_actors": 10,
+  "n_classes": 8,
+  "cv": "5-fold subject-independent",
+  "configs": {
+    "Audio only": {
+      "accuracy_mean": 0.313,
+      "accuracy_std": 0.04,
+      "macro_f1": 0.274,
+      "macro_auc": 0.699,
+      "n_features": 72
+    },
+    "Video only": {
+      "accuracy_mean": 0.319,
+      "accuracy_std": 0.057,
+      "macro_f1": 0.295,
+      "macro_auc": 0.735,
+      "n_features": 10
+    },
+    "Timing only": {
+      "accuracy_mean": 0.167,
+      "accuracy_std": 0.011,
+      "macro_f1": 0.158,
+      "macro_auc": 0.57,
+      "n_features": 5
+    },
+    "Concatenation fusion (all)": {
+      "accuracy_mean": 0.43,
+      "accuracy_std": 0.057,
+      "macro_f1": 0.409,
+      "macro_auc": 0.793,
+      "n_features": 87
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "audio_emotion": {
+    "accuracy_mean": 0.349,
+    "accuracy_std": 0.027,
+    "macro_f1": 0.34,
+    "macro_precision": 0.342,
+    "macro_recall": 0.344,
+    "n_samples": 1440,
+    "n_classes": 8,
+    "cv": "5-fold stratified",
+    "note": "8-class RAVDESS emotion from audio features.",
+    "features": 5,
+    "confusion_png": "experiments/measure\\confusion_audio_emotion.png"
+  },
+  "audio_stress_random": {
+    "accuracy_mean": 0.639,
+    "accuracy_std": 0.026,
+    "macro_f1": 0.631,
+    "macro_precision": 0.642,
+    "macro_recall": 0.626,
+    "n_samples": 1440,
+    "n_classes": 3,
+    "cv": "5-fold stratified",
+    "note": "3-class stress (proxy-labelled from emotion), random split.",
+    "features": 72,
+    "confusion_png": "experiments/measure\\confusion_audio_stress_random.png"
+  },
+  "audio_stress_subject_independent": {
+    "accuracy_mean": 0.531,
+    "accuracy_std": 0.021,
+    "macro_f1": 0.523,
+    "macro_precision": 0.539,
+    "macro_recall": 0.52,
+    "n_samples": 1440,
+    "n_classes": 3,
+    "cv": "5-fold (subject-independent, by actor)",
+    "note": "Same model, subject-independent (by actor) - the honest number.",
+    "features": 72,
+    "confusion_png": "experiments/measure\\confusion_audio_stress_subject_independent.png"
+  },
+  "visual_behavior": {
+    "accuracy_mean": 0.871,
+    "accuracy_std": 0.012,
+    "macro_f1": 0.869,
+    "macro_precision": 0.872,
+    "macro_recall": 0.868,
+    "n_samples": 2758,
+    "n_classes": 8,
+    "cv": "5-fold stratified",
+    "note": "8-class emotion from genuine visual behaviour features only (leaky emotion_score/derived columns removed).",
+    "features": 10,
+    "confusion_png": "experiments/measure\\confusion_visual_behavior.png"
+  },
+  "cognitive_state": {
+    "accuracy_mean": 1.0,
+    "accuracy_std": 0.0,
+    "macro_f1": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "n_samples": 24,
+    "n_classes": 3,
+    "cv": "5-fold stratified",
+    "note": "WARNING: only 24 samples - NOT statistically meaningful; report as illustrative only (fixes the misleading 1.00 headline).",
+    "features": 7,
+    "confusion_png": "experiments/measure\\confusion_cognitive_state.png"
+  }
+}

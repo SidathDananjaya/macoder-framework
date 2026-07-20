@@ -1,0 +1,203 @@
+{
+  "session_id": "session_20260709_093714",
+  "started_at": "2026-07-09 09:37:14",
+  "ended_at": "2026-07-09 09:38:58",
+  "frame_count": 184,
+  "duration_seconds": 87.5,
+  "duration": "01:27",
+  "stress": {
+    "average_percent": 9.0,
+    "average_level": "LOW",
+    "highest_level": "MEDIUM",
+    "highest_at": "00:03",
+    "distribution": {
+      "LOW": 151,
+      "MEDIUM": 33,
+      "HIGH": 0
+    }
+  },
+  "emotion": {
+    "dominant": "neutral",
+    "distribution": {
+      "neutral": 141,
+      "fear": 18,
+      "sad": 14,
+      "happy": 4,
+      "surprise": 4,
+      "angry": 2,
+      "unknown": 1
+    },
+    "stability_percent": 83.1,
+    "timeline": [
+      {
+        "time": "00:00",
+        "emotion": "unknown"
+      },
+      {
+        "time": "00:02",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:03",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:04",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:16",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:16",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:17",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:18",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:19",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:20",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:29",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:30",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:30",
+        "emotion": "fear"
+      },
+      {
+        "time": "00:31",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:36",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:38",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:44",
+        "emotion": "happy"
+      },
+      {
+        "time": "00:46",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:51",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:53",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:53",
+        "emotion": "surprise"
+      },
+      {
+        "time": "00:55",
+        "emotion": "neutral"
+      },
+      {
+        "time": "00:57",
+        "emotion": "sad"
+      },
+      {
+        "time": "00:58",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:06",
+        "emotion": "angry"
+      },
+      {
+        "time": "01:07",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:20",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:23",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:24",
+        "emotion": "fear"
+      },
+      {
+        "time": "01:25",
+        "emotion": "neutral"
+      },
+      {
+        "time": "01:27",
+        "emotion": "surprise"
+      },
+      {
+        "time": "01:27",
+        "emotion": "neutral"
+      }
+    ]
+  },
+  "risk": {
+    "average_score": 20.2,
+    "highest_score": 44.8,
+    "highest_at": "00:22",
+    "dominant_level": "LOW",
+    "final_deception": "LOW",
+    "distribution": {
+      "LOW": 179,
+      "MEDIUM": 5,
+      "HIGH": 0
+    },
+    "timeline": [
+      {
+        "time": "00:00",
+        "level": "LOW",
+        "score": 0
+      },
+      {
+        "time": "00:21",
+        "level": "MEDIUM",
+        "score": 40.9
+      },
+      {
+        "time": "00:23",
+        "level": "LOW",
+        "score": 36.6
+      }
+    ]
+  },
+  "blink": {
+    "total": 11,
+    "per_minute": 7.5
+  },
+  "gaze": {
+    "average_stability_percent": 99.3,
+    "avoidance_percent": 0.7
+  },
+  "summary": "Candidate appeared 'neutral' for about 77% of the 01:27 session. Average stress was LOW (9.0%), peaking at MEDIUM around 00:03. Overall deception risk was LOW (avg 20.2/100, peak 44.8 at 00:22).",
+  "recommendations": [
+    "Candidate remained calm and stable throughout, with low deception indicators across all modalities."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "n_frames": 120,
+  "hardware": "CPU-only (no GPU)",
+  "stages": {
+    "visual_pipeline": {
+      "mean_ms": 178.1,
+      "p95_ms": 274.7,
+      "n": 120
+    },
+    "audio_pipeline": {
+      "mean_ms": 63.1,
+      "p95_ms": 348.5,
+      "n": 120
+    },
+    "fusion_and_response": {
+      "mean_ms": 0.1,
+      "p95_ms": 0.1,
+      "n": 120
+    },
+    "end_to_end_per_frame": {
+      "mean_ms": 241.3,
+      "p95_ms": 470.9,
+      "n": 120
+    }
+  }
+}

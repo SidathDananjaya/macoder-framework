@@ -1,0 +1,61 @@
+{
+  "scenario": {
+    "visual_emotion": "neutral",
+    "visual_conf": 0.85,
+    "audio_emotion": "angry",
+    "audio_conf": 0.8,
+    "warning_threshold": 0.4
+  },
+  "conditions": [
+    {
+      "condition": "Clean (good video + good audio)",
+      "video_quality": 0.9,
+      "audio_quality": 0.7,
+      "adaptive_weight_visual": 0.577,
+      "adaptive_weight_audio": 0.423,
+      "adaptive_fused_emotion": "neutral",
+      "fixed_5050_emotion": "neutral",
+      "warning_banner": false
+    },
+    {
+      "condition": "Degraded video (dark/blurred)",
+      "video_quality": 0.2,
+      "audio_quality": 0.7,
+      "adaptive_weight_visual": 0.233,
+      "adaptive_weight_audio": 0.767,
+      "adaptive_fused_emotion": "angry",
+      "fixed_5050_emotion": "neutral",
+      "warning_banner": false
+    },
+    {
+      "condition": "Degraded audio (noisy/quiet)",
+      "video_quality": 0.9,
+      "audio_quality": 0.15,
+      "adaptive_weight_visual": 0.864,
+      "adaptive_weight_audio": 0.136,
+      "adaptive_fused_emotion": "neutral",
+      "fixed_5050_emotion": "neutral",
+      "warning_banner": false
+    },
+    {
+      "condition": "Video only (audio not routed)",
+      "video_quality": 0.9,
+      "audio_quality": 0.0,
+      "adaptive_weight_visual": 1.0,
+      "adaptive_weight_audio": 0.0,
+      "adaptive_fused_emotion": "neutral",
+      "fixed_5050_emotion": "neutral",
+      "warning_banner": false
+    },
+    {
+      "condition": "Both channels poor",
+      "video_quality": 0.2,
+      "audio_quality": 0.15,
+      "adaptive_weight_visual": 0.586,
+      "adaptive_weight_audio": 0.414,
+      "adaptive_fused_emotion": "neutral",
+      "fixed_5050_emotion": "neutral",
+      "warning_banner": true
+    }
+  ]
+}

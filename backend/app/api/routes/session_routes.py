@@ -62,6 +62,34 @@ def get_session_data():
     )
 
 
+# The session CSV schema has evolved across phases, so read columns
+# defensively: pick the first column that exists and degrade to a default
+# rather than raising a KeyError (which surfaced as ASGI 500s on the dashboard's
+# summary tiles).
+
+def _mean_of(df, *names, default=0.0):
+    for name in names:
+        if name in df.columns:
+            value = pd.to_numeric(df[name], errors="coerce").mean()
+            return round(float(value), 2) if pd.notna(value) else default
+    return default
+
+
+def _max_of(df, *names, default=0.0):
+    for name in names:
+        if name in df.columns:
+            value = pd.to_numeric(df[name], errors="coerce").max()
+            return round(float(value), 2) if pd.notna(value) else default
+    return default
+
+
+def _mode_of(df, *names, default="unknown"):
+    for name in names:
+        if name in df.columns and not df[name].dropna().empty:
+            return df[name].mode()[0]
+    return default
+
+
 @router.get("/session-summary")
 def get_session_summary():
 
@@ -74,30 +102,34 @@ def get_session_summary():
 
     df = pd.read_csv(file)
 
+    if len(df) == 0:
+        return {"error": "Session CSV is empty"}
+
     return {
         "records": len(df),
 
+        # Column names differ across phases; fall back through the likely names.
         "avg_emotion_confidence":
-            round(df["emotion_confidence"].mean(), 2),
+            _mean_of(df, "cognitive_confidence", "emotion_confidence"),
 
         "avg_temporal_confidence":
-            round(df["temporal_confidence"].mean(), 2),
+            _mean_of(df, "fusion_confidence", "temporal_confidence"),
 
         "max_blink_rate":
-            round(df["blink_rate"].max(), 2),
+            _max_of(df, "blink_count", "blink_rate"),
 
         "dominant_emotion":
-            df["emotion"].mode()[0],
+            _mode_of(df, "final_emotion", "emotion"),
 
         "dominant_temporal_emotion":
-            df["temporal_emotion"].mode()[0],
+            _mode_of(df, "temporal_emotion", "emotion"),
 
         "most_common_stress":
-            df["stress_level"].mode()[0],
+            _mode_of(df, "stress_level"),
 
         "most_common_cognitive_load":
-            df["cognitive_load"].mode()[0],
+            _mode_of(df, "cognitive_load"),
 
         "most_common_deception":
-            df["deception_risk"].mode()[0]
+            _mode_of(df, "deception_risk"),
     }

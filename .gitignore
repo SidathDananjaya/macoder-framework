@@ -1,47 +1,47 @@
-# Python virtual environments
+# ── Python virtual environments (never submit) ──────────────────────────────
 vision_env/
 backend/venv/
 venv/
+.venv/
 env/
 .env
 
-# Node (frontend)
+# ── Node (frontend) ─────────────────────────────────────────────────────────
 frontend/node_modules/
 node_modules/
+frontend/dist/
+frontend/.vite/
 
-# Dataset & raw data (large / generated)
+# ── Raw dataset (13 GB RAVDESS — obtain separately, see README) ──────────────
 datasets/raw/
-datasets/processed/   # optional – if you want to keep processed, remove this line
+
+# ── Runtime scratch / temp ──────────────────────────────────────────────────
 temp_uploads/
-outputs/              # session logs & generated outputs
+outputs/                       # generated session logs & reports (regenerated at run time)
 
-# Experiment outputs (model files, plots, etc.)
-experiments/*/        # ignore all subfolders, but keep folder structure if needed
-!experiments/README.md
-
-# Byte-compiled / logs
+# ── Byte-compiled / logs / local secrets ────────────────────────────────────
 __pycache__/
 *.pyc
 *.log
 *.db
+backend/app/core/config_local.py
 
-# IDE / OS
+# ── IDE / OS ────────────────────────────────────────────────────────────────
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
 
-# Frontend build & dependencies
-frontend/dist/
-frontend/.vite/
-
-# Backend – maybe ignore local config with secrets
-backend/app/core/config_local.py
-*.pkl
-*.h5
-*.npy
-
-# Testing & coverage
+# ── Testing & coverage caches ───────────────────────────────────────────────
 .pytest_cache/
 .coverage
 htmlcov/
+
+# ─────────────────────────────────────────────────────────────────────────────
+# INTENTIONALLY TRACKED for submission (do NOT re-ignore):
+#   experiments/**   → trained models (.pkl/.h5), metrics, confusion matrices, SHAP plots
+#   datasets/processed/**  → engineered feature CSVs (~17 MB)
+#   test-results/**  → system-testing screenshots (test evidence)
+# The examiner needs these to run and verify the system, so the blanket
+# *.pkl / *.h5 / *.npy and experiments/*/ ignores were removed on purpose.
+# ─────────────────────────────────────────────────────────────────────────────

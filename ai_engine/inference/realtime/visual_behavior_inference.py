@@ -16,6 +16,11 @@ class VisualBehaviorInference:
             "visual_behavior_label_encoder.pkl"
         )
 
+        self.scaler = joblib.load(
+            "experiments/exp_005_visual_behavior/"
+            "visual_scaler.pkl"
+        )
+
     def predict(self, features_dict):
 
         df = pd.DataFrame([features_dict])
@@ -28,6 +33,16 @@ class VisualBehaviorInference:
 
         emotion = self.encoder.inverse_transform(
             [prediction]
+        )[0]
+
+        scaled_features = self.scaler.transform(df)
+
+        prediction = self.model.predict(
+            scaled_features
+        )[0]
+
+        probabilities = self.model.predict_proba(
+            scaled_features
         )[0]
 
         return {
