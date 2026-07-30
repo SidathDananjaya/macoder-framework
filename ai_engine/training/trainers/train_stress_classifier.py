@@ -25,9 +25,6 @@ from ai_engine.configs.project_paths import (
     EXPERIMENTS_DIR
 )
 
-# =========================
-# LOAD DATASET
-# =========================
 
 DATASET_PATH = (
     PROCESSED_DIR /
@@ -41,9 +38,6 @@ print("Dataset Loaded")
 
 print(df.head())
 
-# =========================
-# FEATURES
-# =========================
 
 X = df.drop(columns=[
     "file",
@@ -51,28 +45,18 @@ X = df.drop(columns=[
     "stress_level"
 ])
 
-# =========================
-# LABELS
-# =========================
 
 y = df["stress_level"]
 
-# Encode labels
 label_encoder = LabelEncoder()
 
 y_encoded = label_encoder.fit_transform(y)
 
-# =========================
-# SCALING
-# =========================
 
 scaler = StandardScaler()
 
 X_scaled = scaler.fit_transform(X)
 
-# =========================
-# TRAIN TEST SPLIT
-# =========================
 
 X_train, X_test, y_train, y_test = train_test_split(
     X_scaled,
@@ -86,9 +70,6 @@ print(f"\nTraining samples: {len(X_train)}")
 
 print(f"Testing samples: {len(X_test)}")
 
-# =========================
-# MODEL
-# =========================
 
 model = RandomForestClassifier(
     n_estimators=300,
@@ -96,23 +77,14 @@ model = RandomForestClassifier(
     random_state=42
 )
 
-# =========================
-# TRAIN
-# =========================
 
 print("\nTraining stress classifier...")
 
 model.fit(X_train, y_train)
 
-# =========================
-# PREDICT
-# =========================
 
 y_pred = model.predict(X_test)
 
-# =========================
-# METRICS
-# =========================
 
 accuracy = accuracy_score(
     y_test,
@@ -131,9 +103,6 @@ print(
     )
 )
 
-# =========================
-# SAVE MODEL
-# =========================
 
 EXPERIMENT_DIR = (
     EXPERIMENTS_DIR /

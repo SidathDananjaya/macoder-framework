@@ -1,7 +1,5 @@
 import { EMOTION_EMOJI } from "../utils/emotion"
 
-// Risk level -> Tailwind text color. Mirrors the Phase 4 gauge thresholds
-// (green LOW / amber MEDIUM / red HIGH).
 const riskColor = (level) =>
   level === "HIGH"
     ? "text-red-400"

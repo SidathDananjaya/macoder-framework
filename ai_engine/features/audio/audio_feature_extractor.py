@@ -2,11 +2,6 @@ import librosa
 import numpy as np
 
 
-# ===================================
-# OLD FUNCTIONS
-# Needed by Stress Classifier
-# ===================================
-
 def extract_mfcc(signal, sr, n_mfcc=13):
 
     mfccs = librosa.feature.mfcc(
@@ -58,25 +53,7 @@ def extract_energy(signal):
     )
 
 
-# ===================================
-# NEW AUDIO EMOTION FEATURES
-# Needed by Exp_007
-# ===================================
-
 class AudioFeatureExtractor:
-    """Audio-emotion feature extractor (single source of truth).
-
-    The model is trained by building the dataset with *this same method*
-    (scripts/train_audio_emotion_v2.py), so the live features and the training
-    features are guaranteed identical - no train/inference skew.
-
-    The original version collapsed all 13 MFCCs into one scalar mean, discarding
-    almost all the discriminative information (~0.34 acc). This richer set keeps
-    the MFCCs per-coefficient (mean + std), their first-order deltas (dynamics),
-    a chroma profile, and standard spectral shape descriptors. All keys are
-    emitted in a FIXED order so the scaler/model column alignment is stable.
-    """
-
     N_MFCC = 13
 
     def extract_features(self, filepath):
@@ -86,13 +63,10 @@ class AudioFeatureExtractor:
         return self.extract_from_signal(signal, sr)
 
     def extract_from_signal(self, signal, sr=22050):
-        """Same features from an in-memory signal (used by the live pipeline)."""
-
         signal = np.asarray(signal, dtype=np.float32)
 
         features = {}
 
-        # Guard: empty/near-silent input -> all-zero vector of the right shape.
         if signal.size < 512:
             return self._zero_vector()
 
@@ -100,7 +74,6 @@ class AudioFeatureExtractor:
         mfcc_delta = librosa.feature.delta(mfccs)
         chroma = librosa.feature.chroma_stft(y=signal, sr=sr)
 
-        # Per-coefficient MFCC mean + std.
         mfcc_mean = np.mean(mfccs, axis=1)
         mfcc_std = np.std(mfccs, axis=1)
         dmfcc_mean = np.mean(mfcc_delta, axis=1)
@@ -132,7 +105,6 @@ class AudioFeatureExtractor:
         return features
 
     def feature_names(self):
-        """Ordered feature names (matches extract_from_signal insertion order)."""
         names = (
             [f"mfcc_{i}_mean" for i in range(self.N_MFCC)]
             + [f"mfcc_{i}_std" for i in range(self.N_MFCC)]

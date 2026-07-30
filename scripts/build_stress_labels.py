@@ -4,7 +4,6 @@ from ai_engine.configs.project_paths import (
     PROCESSED_DIR
 )
 
-# Load advanced dataset
 DATASET_PATH = (
     PROCESSED_DIR /
     "audio" /
@@ -13,7 +12,6 @@ DATASET_PATH = (
 
 df = pd.read_csv(DATASET_PATH)
 
-# Emotion → Stress mapping
 STRESS_MAP = {
     "angry": "high",
     "fearful": "high",
@@ -27,12 +25,10 @@ STRESS_MAP = {
     "neutral": "low"
 }
 
-# Create stress label column
 df["stress_level"] = df["emotion"].map(
     STRESS_MAP
 )
 
-# Save updated dataset
 OUTPUT_PATH = (
     PROCESSED_DIR /
     "audio" /

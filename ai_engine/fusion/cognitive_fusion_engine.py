@@ -27,35 +27,30 @@ class CognitiveFusionEngine:
 
         score = 0
 
-        # Stress
         if stress_level == "HIGH":
             score += 3
 
         elif stress_level == "MEDIUM":
             score += 2
 
-        # Cognitive Load
         if cognitive_load == "HIGH":
             score += 3
 
         elif cognitive_load == "MEDIUM":
             score += 2
 
-        # Deception Risk
         if deception_risk == "HIGH":
             score += 3
 
         elif deception_risk == "MEDIUM":
             score += 2
 
-        # Anomaly
         if anomaly_risk == "HIGH":
             score += 3
 
         elif anomaly_risk == "MEDIUM":
             score += 2
 
-        # Final State
 
         if score >= 10:
 

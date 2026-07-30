@@ -75,7 +75,6 @@ for video_path in video_files:
 
         frame_count += 1
 
-        # Process every 10th frame
         if frame_count % 10 != 0:
             continue
 

@@ -1,9 +1,3 @@
-"""Phase 7 - Session Recording routes.
-
-Endpoints for exporting the current live recording and reading back stored
-session recordings (the structured JSON that Phase 8 turns into a report).
-"""
-
 import glob
 import json
 import os
@@ -24,7 +18,6 @@ from backend.app.services.session_logger_service import (
 
 router = APIRouter()
 
-# outputs/session_logs (project root is four levels up from this file).
 SESSION_LOG_DIR = os.path.join(
     os.path.abspath(
         os.path.join(os.path.dirname(__file__), "../../../..")
@@ -36,8 +29,6 @@ SESSION_LOG_DIR = os.path.join(
 
 @router.post("/session/export")
 async def export_session():
-    """Persist the flat CSV log (backward compatible)."""
-
     filename = await save_session()
 
     return {
@@ -48,8 +39,6 @@ async def export_session():
 
 @router.post("/session/export/json")
 async def export_session_json():
-    """Persist the structured JSON recording of the current session."""
-
     filename = await save_session_json()
 
     return {
@@ -60,15 +49,11 @@ async def export_session_json():
 
 @router.get("/session/status")
 async def get_session_status():
-    """Snapshot of the in-progress recording (id, frame count, ...)."""
-
     return await session_status()
 
 
 @router.get("/session/recordings")
 def list_recordings():
-    """List stored JSON recordings, newest first."""
-
     files = glob.glob(
         os.path.join(SESSION_LOG_DIR, "*.json")
     )
@@ -84,8 +69,6 @@ def list_recordings():
 
 @router.get("/session/recordings/latest")
 def latest_recording():
-    """Return the most recent stored JSON recording."""
-
     files = glob.glob(
         os.path.join(SESSION_LOG_DIR, "*.json")
     )
@@ -99,22 +82,13 @@ def latest_recording():
         return json.load(file)
 
 
-# ----------------------------------------------------------------------
-# Phase 8 - Automatic Report Generator
-# ----------------------------------------------------------------------
-
-
 @router.get("/session/report")
 async def get_session_report():
-    """Interview report for the current (live / in-memory) recording."""
-
     return await session_report()
 
 
 @router.post("/session/report/export")
 async def export_session_report():
-    """Persist the current session's report to ``<session_id>_report.json``."""
-
     report = await session_report()
 
     if report.get("frame_count", 0) == 0:
@@ -133,9 +107,6 @@ async def export_session_report():
 
 @router.get("/session/report/{filename}")
 def get_stored_report(filename: str):
-    """Interview report for a stored JSON recording (by file name)."""
-
-    # Guard against path traversal - only a bare file name is accepted.
     if os.path.basename(filename) != filename:
         raise HTTPException(status_code=400, detail="Invalid file name")
 
@@ -147,27 +118,13 @@ def get_stored_report(filename: str):
     return report_from_file(path)
 
 
-# ----------------------------------------------------------------------
-# Phase 9 - LLM Interpretation
-# ----------------------------------------------------------------------
-
-
 @router.post("/session/interpret")
 async def interpret_session():
-    """Local LLM (Ollama) interpretation of the current live recording.
-
-    POST because it triggers an LLM generation. Always returns a structured
-    interpretation; ``llm_available: false`` marks the rule-based fallback.
-    """
-
     return await session_interpretation()
 
 
 @router.post("/session/interpret/{filename}")
 def interpret_stored_session(filename: str):
-    """LLM interpretation of a stored JSON recording (by file name)."""
-
-    # Guard against path traversal - only a bare file name is accepted.
     if os.path.basename(filename) != filename:
         raise HTTPException(status_code=400, detail="Invalid file name")
 

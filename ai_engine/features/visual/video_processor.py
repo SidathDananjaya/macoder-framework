@@ -100,7 +100,6 @@ class VideoProcessor:
 
         self.emotion_detector = EmotionDetector()
 
-        # Performance optimization
         self.frame_count = 0
         self.current_emotion = "unknown"
 
@@ -234,10 +233,8 @@ class VideoProcessor:
 
             self.frame_count += 1
 
-            # Detect faces
             detections = self.face_detector.detect_faces(frame)
 
-            # Draw detections
             frame = self.face_detector.draw_detections(
                 frame,
                 detections
@@ -623,7 +620,6 @@ class VideoProcessor:
                                 self.cognitive_assessment
                         })
 
-                    # Run emotion detection every 30 frames
                     if self.frame_count % 30 == 0:
 
                         emotion_data = self.emotion_detector.analyze_emotion(frame)

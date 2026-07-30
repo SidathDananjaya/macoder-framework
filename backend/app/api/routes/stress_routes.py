@@ -18,7 +18,6 @@ async def predict_stress_api(
     file: UploadFile = File(...)
 ):
 
-    # Save uploaded file
     file_path = os.path.join(
         UPLOAD_DIR,
         file.filename
@@ -31,7 +30,6 @@ async def predict_stress_api(
             buffer
         )
 
-    # Predict
     result = predict_stress(file_path)
 
     return {

@@ -4,10 +4,6 @@ import plotly.express as px
 from pathlib import Path
 
 
-# ---------------------------------------------------
-# Page Config
-# ---------------------------------------------------
-
 st.set_page_config(
 
     page_title="MaCoDeR Dashboard",
@@ -22,9 +18,6 @@ st.markdown(
     "and Deception Analysis System"
 )
 
-# ---------------------------------------------------
-# Locate session logs
-# ---------------------------------------------------
 
 log_dir = Path("outputs/session_logs")
 
@@ -39,9 +32,6 @@ if not csv_files:
 
     st.stop()
 
-# ---------------------------------------------------
-# Session selector
-# ---------------------------------------------------
 
 selected_file = st.sidebar.selectbox(
 
@@ -52,9 +42,6 @@ selected_file = st.sidebar.selectbox(
     format_func=lambda x: x.name
 )
 
-# ---------------------------------------------------
-# Load CSV
-# ---------------------------------------------------
 
 df = pd.read_csv(selected_file)
 
@@ -62,9 +49,6 @@ st.sidebar.success(
     f"Loaded: {selected_file.name}"
 )
 
-# ---------------------------------------------------
-# Metrics
-# ---------------------------------------------------
 
 col1, col2, col3, col4 = st.columns(4)
 
@@ -96,9 +80,6 @@ col4.metric(
     f"{df['blink_rate'].max():.1f}"
 )
 
-# ---------------------------------------------------
-# Emotion Timeline
-# ---------------------------------------------------
 
 st.subheader("Emotion Timeline")
 
@@ -118,9 +99,6 @@ st.plotly_chart(
     use_container_width=True
 )
 
-# ---------------------------------------------------
-# Temporal Emotion Timeline
-# ---------------------------------------------------
 
 st.subheader("Temporal Emotion Confidence")
 
@@ -140,9 +118,6 @@ st.plotly_chart(
     use_container_width=True
 )
 
-# ---------------------------------------------------
-# Blink Rate
-# ---------------------------------------------------
 
 st.subheader("Blink Rate Analysis")
 
@@ -162,9 +137,6 @@ st.plotly_chart(
     use_container_width=True
 )
 
-# ---------------------------------------------------
-# Emotion Distribution
-# ---------------------------------------------------
 
 st.subheader("Detected Emotion Distribution")
 
@@ -195,9 +167,6 @@ st.plotly_chart(
     use_container_width=True
 )
 
-# ---------------------------------------------------
-# Stress Level Distribution
-# ---------------------------------------------------
 
 st.subheader("Stress Level Distribution")
 
@@ -228,9 +197,6 @@ st.plotly_chart(
     use_container_width=True
 )
 
-# ---------------------------------------------------
-# Cognitive Load Distribution
-# ---------------------------------------------------
 
 st.subheader("Cognitive Load Distribution")
 
@@ -261,9 +227,6 @@ st.plotly_chart(
     use_container_width=True
 )
 
-# ---------------------------------------------------
-# Risk Trend
-# ---------------------------------------------------
 
 if "fusion_confidence" in df.columns:
 
@@ -285,17 +248,11 @@ if "fusion_confidence" in df.columns:
         use_container_width=True
     )
 
-# ---------------------------------------------------
-# Raw Data
-# ---------------------------------------------------
 
 st.subheader("Raw Session Data")
 
 st.dataframe(df)
 
-# ---------------------------------------------------
-# Summary
-# ---------------------------------------------------
 
 st.subheader("Research Insights")
 

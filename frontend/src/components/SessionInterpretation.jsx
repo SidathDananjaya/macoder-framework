@@ -1,11 +1,3 @@
-// Phase 9 - LLM Interpretation panel.
-//
-// Renders the structured interpretation produced by a local LLM (Ollama) from
-// the Phase-8 report: a headline, observation bullets, a flowing overall
-// assessment, and an always-present ethical caveat. Falls back cleanly when the
-// LLM is unavailable (Ollama not running), showing the rule-based summary with a
-// clear banner.
-
 const SessionInterpretation = ({ interpretation, loading }) => {
 
   if (loading) {
@@ -64,12 +56,10 @@ const SessionInterpretation = ({ interpretation, loading }) => {
         </p>
       )}
 
-      {/* Headline */}
       <p className="text-xl text-gray-100 font-semibold leading-snug">
         {headline}
       </p>
 
-      {/* Observations */}
       {observations.length > 0 && (
         <div>
           <h3 className="text-lg text-gray-300 mb-2">Observations</h3>
@@ -84,7 +74,6 @@ const SessionInterpretation = ({ interpretation, loading }) => {
         </div>
       )}
 
-      {/* Overall assessment */}
       {overall_assessment && (
         <div>
           <h3 className="text-lg text-gray-300 mb-2">Overall Assessment</h3>
@@ -94,7 +83,6 @@ const SessionInterpretation = ({ interpretation, loading }) => {
         </div>
       )}
 
-      {/* Ethical caveat */}
       {confidence_note && (
         <p className="text-gray-400 text-sm italic border-t border-gray-800 pt-4">
           {confidence_note}

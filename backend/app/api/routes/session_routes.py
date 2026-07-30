@@ -5,7 +5,6 @@ import glob
 
 router = APIRouter()
 
-# Project root directory
 BASE_DIR = os.path.abspath(
     os.path.join(
         os.path.dirname(__file__),
@@ -13,7 +12,6 @@ BASE_DIR = os.path.abspath(
     )
 )
 
-# outputs/session_logs path
 SESSION_LOG_DIR = os.path.join(
     BASE_DIR,
     "outputs",
@@ -53,19 +51,12 @@ def get_session_data():
 
     df = pd.read_csv(file)
 
-    # Optional cleanup for NaN values
     df = df.fillna("")
 
-    # Convert dataframe to JSON
     return df.to_dict(
         orient="records"
     )
 
-
-# The session CSV schema has evolved across phases, so read columns
-# defensively: pick the first column that exists and degrade to a default
-# rather than raising a KeyError (which surfaced as ASGI 500s on the dashboard's
-# summary tiles).
 
 def _mean_of(df, *names, default=0.0):
     for name in names:
@@ -108,7 +99,6 @@ def get_session_summary():
     return {
         "records": len(df),
 
-        # Column names differ across phases; fall back through the likely names.
         "avg_emotion_confidence":
             _mean_of(df, "cognitive_confidence", "emotion_confidence"),
 

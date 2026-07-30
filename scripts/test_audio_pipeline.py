@@ -16,7 +16,6 @@ from ai_engine.features.audio.audio_feature_extractor import (
     extract_energy
 )
 
-# AUDIO_PATH = "datasets/raw/RAVDESS/Audio_Speech_Actors_01-24/Actor_01/03-01-05-01-01-01-01.wav"
 AUDIO_PATH = (
     RAVDESS_PATH /
     "Actor_01" /

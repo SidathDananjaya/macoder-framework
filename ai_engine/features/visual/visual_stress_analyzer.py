@@ -97,11 +97,9 @@ class VisualStressAnalyzer:
 
         stress_score = 0
 
-        # High blink rate
         if blink_rate > 25:
             stress_score += 1
 
-        # Eye tightening
         if avg_ear < 0.22:
             stress_score += 1
 

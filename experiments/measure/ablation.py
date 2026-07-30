@@ -1,22 +1,3 @@
-"""Cross-modal ablation study (dissertation Section 6.3).
-
-Uses the aligned per-utterance multimodal dataset
-(datasets/processed/multimodal/aligned_features.csv - build it first with
-build_aligned_multimodal.py) to measure each modality's contribution and show
-that fusion beats the unimodal baselines.
-
-Configurations (same estimator + subject-independent, by-actor CV for all):
-
-    Audio only        | Video only | Timing only
-    Concatenation fusion (all modalities)
-
-Metrics: accuracy (mean +/- std), macro-F1, macro AUC-ROC (one-vs-rest).
-
-    ./vision_env/Scripts/python.exe -m experiments.measure.ablation
-
-Writes experiments/measure/ablation_results.json.
-"""
-
 import json
 import os
 
@@ -41,7 +22,6 @@ def _model():
 
 
 def _evaluate(X, y, groups, classes, n_splits):
-    """Subject-independent CV -> accuracy(mean/std), macro-F1, macro AUC."""
     gkf = GroupKFold(n_splits=n_splits)
     fold_acc, y_true_all, y_pred_all = [], [], []
     proba_all, proba_true = [], []
@@ -53,7 +33,6 @@ def _evaluate(X, y, groups, classes, n_splits):
         fold_acc.append(accuracy_score(y[te], pred))
         y_true_all.extend(y[te]); y_pred_all.extend(pred)
 
-        # AUC needs probabilities aligned to the GLOBAL class set.
         proba = mdl.predict_proba(X[te])
         aligned = np.zeros((len(te), len(classes)))
         for j, c in enumerate(mdl.classes_):

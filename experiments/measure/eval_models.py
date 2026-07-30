@@ -1,27 +1,3 @@
-"""Honest held-out model evaluation (dissertation Section 6.2).
-
-Re-evaluates each learned model on RAVDESS with a *clean* protocol so the
-reported numbers are defensible:
-
-* Stratified k-fold cross-validation (mean +/- std accuracy and macro-F1) - more
-  robust than the single 80/20 split the models were trained with.
-* A held-out confusion matrix per model (PNG).
-* For the audio STRESS model, an additional **subject-independent** (by-actor)
-  GroupKFold, because a random split lets the same actor appear in train and
-  test and inflates the score.
-* The cognitive-state model is evaluated but flagged: it has only 24 samples, so
-  its accuracy is NOT statistically meaningful (this replaces the misleading
-  "1.00" headline).
-
-Each model uses the same estimator family as the deployed one
-(RandomForestClassifier + StandardScaler).
-
-Run:
-    ./vision_env/Scripts/python.exe -m experiments.measure.eval_models
-
-Writes experiments/measure/model_eval_results.json + confusion_*.png.
-"""
-
 import json
 import os
 import re
@@ -60,7 +36,6 @@ def _model():
 
 
 def _encode_categoricals(frame):
-    """Ordinal-encode any non-numeric feature columns (e.g. LOW/MEDIUM/HIGH)."""
     out = frame.copy()
     for col in out.columns:
         if out[col].dtype == object:
@@ -69,7 +44,6 @@ def _encode_categoricals(frame):
 
 
 def _actors_from_files(files):
-    """Extract the RAVDESS actor id from each file path for grouping."""
     actors = []
     for path in files:
         m = re.search(r"Actor_(\d+)", str(path))
@@ -78,8 +52,6 @@ def _actors_from_files(files):
 
 
 def _cv_scores(X, y, n_splits=5, groups=None):
-    """Cross-validated predictions -> accuracy, macro P/R/F1 (+ per-fold acc)."""
-
     if groups is not None:
         splitter = GroupKFold(n_splits=n_splits)
         split_iter = splitter.split(X, y, groups)
@@ -89,7 +61,6 @@ def _cv_scores(X, y, n_splits=5, groups=None):
         )
         split_iter = splitter.split(X, y)
 
-    # Per-fold accuracy for a mean +/- std.
     fold_acc = []
     for train_idx, test_idx in split_iter:
         mdl = _model()
@@ -97,7 +68,6 @@ def _cv_scores(X, y, n_splits=5, groups=None):
         pred = mdl.predict(X[test_idx])
         fold_acc.append(accuracy_score(y[test_idx], pred))
 
-    # Pooled out-of-fold predictions for aggregate P/R/F1 + confusion matrix.
     if groups is not None:
         y_pred = cross_val_predict(
             _model(), X, y, cv=GroupKFold(n_splits=n_splits), groups=groups
@@ -137,7 +107,7 @@ def _save_confusion(y_true, y_pred, title, filename):
 def eval_dataset(name, csv, label_col, drop_cols, note="", group_by_actor=False,
                  n_splits=5):
     df = pd.read_csv(csv)
-    df = df.dropna(axis=1, how="all")          # drop empty "Unnamed" columns
+    df = df.dropna(axis=1, how="all")
     df = df.dropna(subset=[label_col])
 
     groups = None
@@ -150,7 +120,6 @@ def eval_dataset(name, csv, label_col, drop_cols, note="", group_by_actor=False,
     X_df = _encode_categoricals(X_df).fillna(0.0)
     X = X_df.values.astype(np.float32)
 
-    # Small datasets: shrink folds so each has >= a couple of samples.
     min_class = int(pd.Series(y).value_counts().min())
     n_splits = max(2, min(n_splits, min_class))
 
@@ -200,11 +169,6 @@ def main():
         "visual_behavior",
         "datasets/processed/video/visual_behavior_features.csv",
         label_col="emotion",
-        # Drop DERIVED columns that leak the label: emotion_score is a 1:1
-        # encoding of the emotion class, and cognitive_load/deception_risk/
-        # stress_score are downstream products, not genuine visual inputs.
-        # Only true behavioural features (EAR, head pose, gaze, blink,
-        # movement) are used.
         drop_cols=["emotion", "emotion_score", "cognitive_load",
                    "deception_risk", "stress_score"],
         note="8-class emotion from genuine visual behaviour features only "

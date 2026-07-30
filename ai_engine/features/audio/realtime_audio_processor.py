@@ -54,17 +54,11 @@ class RealtimeAudioProcessor:
 
                 temp_path = temp_file.name
 
-            # -------------------------
-            # Stress
-            # -------------------------
 
             stress_result = (
                 predict_stress(temp_path)
             )
 
-            # -------------------------
-            # Audio Features
-            # -------------------------
 
             features = (
                 audio_extractor.extract_features(
@@ -72,9 +66,6 @@ class RealtimeAudioProcessor:
                 )
             )
 
-            # -------------------------
-            # Audio Emotion
-            # -------------------------
 
             emotion_result = (
                 audio_emotion_model.predict(
@@ -82,9 +73,6 @@ class RealtimeAudioProcessor:
                 )
             )
 
-            # -------------------------
-            # Speech Intensity (RMS energy)
-            # -------------------------
 
             speech_intensity = float(
                 np.sqrt(
@@ -94,18 +82,12 @@ class RealtimeAudioProcessor:
                 )
             ) if audio_data.size else 0.0
 
-            # -------------------------
-            # Audio Quality (Section 5.4.2) - drives fusion weight + warning
-            # -------------------------
 
             audio_quality = assess_audio_quality(
                 audio_data,
                 sample_rate
             )
 
-            # -------------------------
-            # Timing modality (Section 5.4.3) - VAD-based response/pause/rate
-            # -------------------------
 
             timing = extract_timing_features(
                 audio_data,
@@ -122,10 +104,6 @@ class RealtimeAudioProcessor:
                 "audio_confidence":
                     emotion_result["confidence"],
 
-                # Normalise to upper case so it matches the fusion's
-                # STRESS_MAP keys ("LOW"/"MEDIUM"/"HIGH"). The stress model
-                # returns lower case, which previously mapped to 0.0 and
-                # silently dropped audio stress from the fusion.
                 "audio_stress":
                     str(stress_result["stress_level"]).upper(),
 

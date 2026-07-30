@@ -1,21 +1,3 @@
-"""Real-time latency measurement (dissertation Section 6.7).
-
-Drives the *actual* deployed pipeline (the same functions the websocket route
-calls) with real RAVDESS video frames + audio and reports per-stage latency:
-
-    Visual pipeline   -> process_frame
-    Audio pipeline    -> process_audio
-    Fusion + response -> fuse_results
-    End-to-end        -> sum of the three per frame
-
-Run (from the project root, in the vision_env):
-
-    ./vision_env/Scripts/python.exe -m experiments.measure.measure_latency
-
-Outputs a table to stdout and writes experiments/measure/latency_results.json.
-Hardware is CPU-only (no GPU) - state this in the thesis.
-"""
-
 import asyncio
 import base64
 import glob
@@ -32,10 +14,8 @@ from backend.app.services.realtime_ai_engine import process_frame, reset_engine
 from backend.app.services.realtime_audio_engine import process_audio, reset_audio
 from backend.app.services.realtime_fusion_engine import fuse_results
 
-# Number of frames to time (Section 6.7 asks for N >= 100).
 N_FRAMES = 120
 
-# A RAVDESS video/audio pair to source real frames + speech from.
 VIDEO_GLOB = "datasets/raw/RAVDESS/Video_Speech_Actors_01-24/Actor_01/*.mp4"
 AUDIO_GLOB = "datasets/raw/RAVDESS/Audio_Speech_Actors_01-24/Actor_01/*.wav"
 
@@ -55,8 +35,6 @@ def _summary(values):
 
 
 def _load_frames(n):
-    """Grab up to ``n`` real frames from a RAVDESS video as base64 data URLs."""
-
     paths = sorted(glob.glob(VIDEO_GLOB))
     if not paths:
         raise SystemExit(f"No RAVDESS video found at {VIDEO_GLOB}")
@@ -73,7 +51,6 @@ def _load_frames(n):
             frames.append("data:image/jpeg;base64," + b64)
     cap.release()
 
-    # Loop the clip if it was shorter than n frames.
     if frames:
         while len(frames) < n:
             frames.append(frames[len(frames) % len(frames)])
@@ -81,8 +58,6 @@ def _load_frames(n):
 
 
 def _load_audio_chunks(n, chunk_ms=85):
-    """Split a RAVDESS wav into ~85 ms chunks (one per frame) at native rate."""
-
     paths = sorted(glob.glob(AUDIO_GLOB))
     if not paths:
         return [([], 22050)] * n
@@ -114,7 +89,6 @@ async def main():
 
     visual_ms, audio_ms, fusion_ms, e2e_ms = [], [], [], []
 
-    # Warm up once (first DeepFace/model call is much slower - excluded).
     await process_frame(frames[0])
     await process_audio(*audio_chunks[0])
 

@@ -22,8 +22,6 @@ def normalize_audio(signal):
 
 if __name__ == "__main__":
 
-    # path = "../../datasets/raw/RAVDESS/Actor_01/03-01-01-01-01-01-01.wav"
-    # path = r"C:\Users\Sidath Mendis\Desktop\Reasearch\System-implementation\MaCoDeR\datasets\raw\RAVDESS\Audio_Speech_Actors_01-24\Actor_01\03-01-01-01-01-01-01.wav"
     path = (
             RAVDESS_PATH /
             "Actor_01" /

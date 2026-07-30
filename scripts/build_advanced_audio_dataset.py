@@ -10,14 +10,12 @@ from ai_engine.features.audio.audio_preprocessor import (
     normalize_audio
 )
 
-# BASIC FEATURES
 from ai_engine.features.audio.audio_feature_extractor import (
     extract_mfcc,
     extract_pitch,
     extract_energy
 )
 
-# ADVANCED FEATURES
 from ai_engine.features.audio.advanced_audio_features import (
     extract_delta_mfcc,
     extract_delta2_mfcc,
@@ -27,7 +25,6 @@ from ai_engine.features.audio.advanced_audio_features import (
     extract_energy_variance
 )
 
-# STRESS FEATURES
 from ai_engine.features.audio.speech_rate import (
     estimate_speech_rate
 )
@@ -49,7 +46,6 @@ from ai_engine.configs.project_paths import (
     PROCESSED_DIR
 )
 
-# Emotion mapping
 EMOTION_MAP = {
     "01": "neutral",
     "02": "calm",
@@ -87,9 +83,6 @@ def build_dataset():
 
             signal = normalize_audio(signal)
 
-            # =========================
-            # BASIC FEATURES
-            # =========================
 
             mfcc = extract_mfcc(signal, sr)
 
@@ -97,9 +90,6 @@ def build_dataset():
 
             energy = extract_energy(signal)
 
-            # =========================
-            # ADVANCED FEATURES
-            # =========================
 
             delta = extract_delta_mfcc(signal, sr)
 
@@ -113,9 +103,6 @@ def build_dataset():
 
             energy_var = extract_energy_variance(signal)
 
-            # =========================
-            # STRESS FEATURES
-            # =========================
 
             speech_rate = estimate_speech_rate(signal, sr)
 
@@ -130,7 +117,6 @@ def build_dataset():
 
             zcr = extract_zero_crossing_rate(signal)
 
-            # Label
             emotion = extract_emotion(file_path)
 
             row = {
@@ -149,27 +135,21 @@ def build_dataset():
                 "energy_variance": energy_var
             }
 
-            # MFCC
             for i, value in enumerate(mfcc):
                 row[f"mfcc_{i+1}"] = value
 
-            # Delta MFCC
             for i, value in enumerate(delta):
                 row[f"delta_mfcc_{i+1}"] = value
 
-            # Delta2 MFCC
             for i, value in enumerate(delta2):
                 row[f"delta2_mfcc_{i+1}"] = value
 
-            # Chroma
             for i, value in enumerate(chroma):
                 row[f"chroma_{i+1}"] = value
 
-            # Spectral Contrast
             for i, value in enumerate(contrast):
                 row[f"contrast_{i+1}"] = value
 
-            # Tonnetz
             for i, value in enumerate(tonnetz):
                 row[f"tonnetz_{i+1}"] = value
 
