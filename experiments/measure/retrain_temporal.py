@@ -1,28 +1,3 @@
-"""Honest re-training + evaluation of the temporal-emotion LSTM.
-
-The original temporal model (exp_006) was trained on 9 features **including
-`emotion_score`** - which the audit found is a 1:1 encoding of the emotion label
-(feature #8) - and on *randomly shuffled overlapping sliding-window sequences*
-(adjacent windows share 59/60 frames, so a random split puts near-duplicates in
-both train and test). Both massively inflate its accuracy.
-
-This script quantifies and fixes that:
-
-* **Leaky replication** - 9 features, random split (reproduces the inflated number).
-* **Honest** - 7 GENUINE behavioural features only (drop emotion_score + the
-  constant stress_score) and a **blocked** (contiguous, non-shuffled) split so
-  overlapping windows do not straddle train/test.
-
-The honest model + encoder are saved for live use (7-feature input, no leaked
-label), so the deployed temporal modality is real rather than an echo of the
-current frame emotion.
-
-    ./vision_env/Scripts/python.exe -m experiments.measure.retrain_temporal
-
-Writes experiments/exp_006_temporal_emotion/temporal_emotion_model_v2.h5 (+ encoder)
-and experiments/measure/temporal_eval_results.json.
-"""
-
 import json
 import os
 
@@ -40,9 +15,6 @@ Y_PATH = "datasets/processed/temporal/y_labels.npy"
 OUT_DIR = "experiments/exp_006_temporal_emotion"
 RESULTS = "experiments/measure/temporal_eval_results.json"
 
-# Feature order (build_temporal_sequences.py):
-# 0 avg_ear 1 avg_yaw 2 avg_pitch 3 avg_roll 4 blink_rate 5 gaze_stability
-# 6 movement_score 7 emotion_score(LEAKY) 8 stress_score(constant)
 GENUINE_IDX = [0, 1, 2, 3, 4, 5, 6]
 
 
@@ -50,7 +22,7 @@ def _train_eval(X, y_enc, n_classes, split, epochs=20):
     if split == "random":
         rng = np.random.RandomState(42)
         idx = rng.permutation(len(X))
-    else:  # blocked / contiguous
+    else:
         idx = np.arange(len(X))
     cut = int(0.8 * len(X))
     tr, te = idx[:cut], idx[cut:]

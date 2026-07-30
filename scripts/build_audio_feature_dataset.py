@@ -20,7 +20,6 @@ from ai_engine.configs.project_paths import (
     PROCESSED_DIR
 )
 
-# Emotion mapping
 EMOTION_MAP = {
     "01": "neutral",
     "02": "calm",
@@ -52,24 +51,20 @@ def build_dataset():
 
         try:
 
-            # Load audio
             signal, sr = load_audio(file_path)
 
             signal = normalize_audio(signal)
 
-            # Extract features
             mfcc = extract_mfcc(signal, sr)
 
             pitch = extract_pitch(signal, sr)
 
             energy = extract_energy(signal)
 
-            # Extract label
             emotion = extract_emotion_from_filename(
                 file_path
             )
 
-            # Create row
             row = {
                 "file": file_path,
                 "emotion": emotion,
@@ -77,7 +72,6 @@ def build_dataset():
                 "energy": energy
             }
 
-            # Add MFCCs
             for i, value in enumerate(mfcc):
 
                 row[f"mfcc_{i+1}"] = value
@@ -100,8 +94,6 @@ if __name__ == "__main__":
 
     print(df.head())
 
-    # Create processed directory
-    # os.makedirs(PROCESSED_DIR, exist_ok=True)
 
     AUDIO_PROCESSED_DIR = (
         PROCESSED_DIR / "audio"

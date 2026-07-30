@@ -29,16 +29,13 @@ const LiveCamera = ({
 
   useEffect(() => {
 
-    // Only run the camera/mic + websocket while a session is active; on stop, the cleanup below freezes the recording.
     if (!active) {
       return
     }
 
-    // Backpressure: send one frame at a time and queue the next only after the backend replies, so nothing piles up and Stop takes effect immediately.
     let stopped = false
     let sendTimer = null
 
-    // Draw the current video frame + drained audio and push one message.
     const captureAndSend = () => {
 
       if (stopped) return
@@ -76,7 +73,6 @@ const LiveCamera = ({
         0.7
       )
 
-      // Send the buffered audio with the browser's real sample rate so the backend can resample to 22050 Hz.
       const audioChunk = audioBufferRef.current
       audioBufferRef.current = []
 
@@ -141,7 +137,6 @@ const LiveCamera = ({
               event.inputBuffer
                 .getChannelData(0)
 
-            // Accumulate samples; the send loop drains this buffer into a continuous audio stream.
             const buffer = audioBufferRef.current
 
             for (let i = 0; i < channelData.length; i++) {
@@ -167,12 +162,10 @@ const LiveCamera = ({
             "WebSocket Connected"
           )
 
-          // Fresh session -> reset the client-side timeline.
           if (onSessionStart) {
             onSessionStart()
           }
 
-          // Kick off the first frame; each reply schedules the next one.
           captureAndSend()
         }
 
@@ -187,7 +180,6 @@ const LiveCamera = ({
             onAIUpdate(data)
           }
 
-          // Schedule the next capture ~100 ms after this result, so at most one frame is ever in flight.
           if (!stopped) {
             sendTimer = setTimeout(captureAndSend, 100)
           }
@@ -214,7 +206,6 @@ const LiveCamera = ({
 
     return () => {
 
-      // Stop scheduling new captures before teardown so no frame is sent after the socket starts closing.
       stopped = true
 
       if (sendTimer) {
@@ -234,7 +225,6 @@ const LiveCamera = ({
           )
       }
 
-      // Release the audio graph so the mic indicator turns off.
       if (processorRef.current) {
         processorRef.current.disconnect()
       }

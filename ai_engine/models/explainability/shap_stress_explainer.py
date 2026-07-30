@@ -17,9 +17,6 @@ from ai_engine.configs.project_paths import (
     EXPERIMENTS_DIR
 )
 
-# =========================
-# LOAD DATASET
-# =========================
 
 DATASET_PATH = (
     PROCESSED_DIR /
@@ -29,27 +26,22 @@ DATASET_PATH = (
 
 df = pd.read_csv(DATASET_PATH)
 
-# Features
 X = df.drop(columns=[
     "file",
     "emotion",
     "stress_level"
 ])
 
-# Labels
 y = df["stress_level"]
 
-# Encode
 label_encoder = LabelEncoder()
 
 y_encoded = label_encoder.fit_transform(y)
 
-# Scale
 scaler = StandardScaler()
 
 X_scaled = scaler.fit_transform(X)
 
-# Split
 X_train, X_test, y_train, y_test = train_test_split(
     X_scaled,
     y_encoded,
@@ -58,9 +50,6 @@ X_train, X_test, y_train, y_test = train_test_split(
     stratify=y_encoded
 )
 
-# =========================
-# LOAD MODEL
-# =========================
 
 MODEL_PATH = (
     EXPERIMENTS_DIR /
@@ -70,22 +59,15 @@ MODEL_PATH = (
 
 model = joblib.load(MODEL_PATH)
 
-# =========================
-# SHAP EXPLAINER
-# =========================
 
 print("Building SHAP explainer...")
 
 explainer = shap.TreeExplainer(model)
 
-# Use smaller sample for speed
 sample_data = X_test[:100]
 
 shap_values = explainer.shap_values(sample_data)
 
-# =========================
-# SUMMARY PLOT
-# =========================
 
 print("Generating SHAP summary plot...")
 

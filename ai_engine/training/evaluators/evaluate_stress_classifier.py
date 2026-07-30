@@ -24,9 +24,6 @@ from ai_engine.configs.project_paths import (
     EXPERIMENTS_DIR
 )
 
-# =========================
-# LOAD DATASET
-# =========================
 
 DATASET_PATH = (
     PROCESSED_DIR /
@@ -44,17 +41,14 @@ X = df.drop(columns=[
 
 y = df["stress_level"]
 
-# Encode
 label_encoder = LabelEncoder()
 
 y_encoded = label_encoder.fit_transform(y)
 
-# Scale
 scaler = StandardScaler()
 
 X_scaled = scaler.fit_transform(X)
 
-# Split
 X_train, X_test, y_train, y_test = train_test_split(
     X_scaled,
     y_encoded,
@@ -63,9 +57,6 @@ X_train, X_test, y_train, y_test = train_test_split(
     stratify=y_encoded
 )
 
-# =========================
-# LOAD MODEL
-# =========================
 
 MODEL_PATH = (
     EXPERIMENTS_DIR /
@@ -75,12 +66,8 @@ MODEL_PATH = (
 
 model = joblib.load(MODEL_PATH)
 
-# Predict
 y_pred = model.predict(X_test)
 
-# =========================
-# METRICS
-# =========================
 
 accuracy = accuracy_score(
     y_test,
@@ -96,7 +83,6 @@ report = classification_report(
     output_dict=True
 )
 
-# Save metrics
 EXPERIMENT_DIR = (
     EXPERIMENTS_DIR /
     "exp_002_stress_classifier"
@@ -111,9 +97,6 @@ with open(metrics_path, "w") as f:
 
     json.dump(report, f, indent=4)
 
-# =========================
-# CONFUSION MATRIX
-# =========================
 
 cm = confusion_matrix(
     y_test,
@@ -137,7 +120,6 @@ plt.xlabel("Predicted")
 
 plt.ylabel("Actual")
 
-# Save
 confusion_path = (
     EXPERIMENT_DIR /
     "stress_confusion_matrix.png"

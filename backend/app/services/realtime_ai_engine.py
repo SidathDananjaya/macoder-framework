@@ -5,8 +5,6 @@ import random
 
 from collections import deque
 
-# AI feature/inference imports.
-
 from ai_engine.features.quality.quality_assessor import (
     assess_video_quality
 )
@@ -55,11 +53,9 @@ from ai_engine.inference.realtime.temporal_emotion_inference import (
     TemporalEmotionInference
 )
 
-# Initialise AI modules.
 
 emotion_detector = EmotionDetector()
 
-# The loop runs at ~1 fps but a blink lasts only 0.1-0.4 s, so count on a single frame with the standard EAR threshold (~0.21); the old 0.27/2 config needed a ~1 s closure and missed most blinks.
 blink_detector = BlinkDetector(
     blink_threshold=0.21,
     consecutive_frames=1
@@ -81,7 +77,6 @@ cognitive_inference = (
     CognitiveStateInference()
 )
 
-# Sequence-based temporal emotion (7-feature LSTM); falls back to the frame emotion until its 60-frame buffer fills.
 temporal_inference = (
     TemporalEmotionInference()
 )
@@ -102,16 +97,15 @@ deception_estimator = (
     DeceptionRiskEstimator()
 )
 
-# DeepFace is the ~0.5-0.8 s bottleneck, so refresh emotion every EMOTION_EVERY_N frames and reuse the cached label; the cheap blink path still runs every frame and catches more blinks. Set to 1 for per-frame emotion.
+
 EMOTION_EVERY_N = 2
 
 _frame_index = 0
 _cached_emotion = {"dominant_emotion": "neutral", "emotion_scores": {}}
 
 
-# Recent-window multi-signal stress (replaces the old cumulative blink count that could only rise): stress = 0.5*recent-blink-rate + 0.3*head-movement + 0.2*emotion-negativity, over ~20 frames (~13 s).
 STRESS_WINDOW_FRAMES = 20
-STRESS_BLINK_CEILING = 8.0      # this many blinks in the window reads as maximal
+STRESS_BLINK_CEILING = 8.0      
 STRESS_HIGH_THRESHOLD = 0.60
 STRESS_MEDIUM_THRESHOLD = 0.33
 _NEGATIVE_EMOTIONS = {"fear", "angry", "sad", "disgust"}
@@ -120,11 +114,8 @@ _blink_window = deque(maxlen=STRESS_WINDOW_FRAMES)
 
 
 def _estimate_visual_stress(blink_detected, movement_score, emotion):
-    """Recent-window multi-signal stress level (LOW / MEDIUM / HIGH)."""
-
     _blink_window.append(1 if blink_detected else 0)
 
-    # Blink rate over the recent window (not a running total) so stress falls again when blinking calms.
     blink_component = min(1.0, sum(_blink_window) / STRESS_BLINK_CEILING)
 
     movement_component = min(1.0, (movement_score or 0.0) / 20.0)
@@ -150,7 +141,6 @@ def _estimate_visual_stress(blink_detected, movement_score, emotion):
 
 
 def _face_region_quality(frame, face_landmarks):
-    # Measure video quality on the face crop, not the whole frame, because the background would otherwise dominate the score (e.g. a small webcam window on a big OBS canvas).
 
     height, width = frame.shape[:2]
 
@@ -162,7 +152,6 @@ def _face_region_quality(frame, face_landmarks):
     y1 = int(max(0.0, min(ys)) * height)
     y2 = int(min(1.0, max(ys)) * height)
 
-    # Pad the box ~15% to include the whole face, not just the landmarks.
     pad_x = int(0.15 * max(1, x2 - x1))
     pad_y = int(0.15 * max(1, y2 - y1))
 
@@ -180,8 +169,7 @@ def _face_region_quality(frame, face_landmarks):
 
 
 def reset_engine():
-    # Reset per-session state (blink total, emotion cache, movement/gaze) so each new session starts clean; these are module-level singletons that would otherwise carry over.
-
+    
     global _frame_index, _cached_emotion
 
     blink_detector.reset()
@@ -193,19 +181,15 @@ def reset_engine():
     _frame_index = 0
     _cached_emotion = {"dominant_emotion": "neutral", "emotion_scores": {}}
 
-    # Rolling movement/gaze analysers also accumulate across frames, so reset them too when supported.
     for _mod in (movement_analyzer, gaze_behavior):
         if hasattr(_mod, "reset"):
             _mod.reset()
 
 
-# Process one incoming frame.
-
 async def process_frame(frame_data: str):
 
     try:
 
-        # Decode the base64 image.
         encoded_data = frame_data.split(",")[1]
 
         nparr = np.frombuffer(
@@ -218,11 +202,8 @@ async def process_frame(frame_data: str):
             cv2.IMREAD_COLOR
         )
 
-        # Signal quality (Section 5.4.2) drives the fusion weights and warning; this is a whole-frame fallback, replaced by a face-region measurement once the face is found below.
 
         video_quality = assess_video_quality(frame)
-
-        # Emotion detection (throttled): run the heavy model every Nth frame and reuse the cached label, but always run the first frame so we never serve an empty default.
 
         global _frame_index, _cached_emotion
 
@@ -242,7 +223,6 @@ async def process_frame(frame_data: str):
             emotion_result["dominant_emotion"]
         )
 
-        # Visual emotion confidence from the detector (DeepFace scores are 0..100 percentages).
         emotion_scores = (
             emotion_result.get("emotion_scores", {})
         )
@@ -252,9 +232,6 @@ async def process_frame(frame_data: str):
             if emotion_scores else 0.0
         )
 
-        # Temporal emotion is computed after the visual features below, since the LSTM needs EAR/pose/gaze.
-
-        # Blink detection.
         results = facemesh_tracker.process_frame(frame)
 
         avg_ear = 0.3
@@ -279,13 +256,11 @@ async def process_frame(frame_data: str):
                 results.multi_face_landmarks[0]
             )
 
-            # Video quality on the face region.
             video_quality = _face_region_quality(
                 frame,
                 face_landmarks
             )
 
-            # Eye metrics.
             metrics = eye_metrics.get_eye_metrics(
                 frame,
                 face_landmarks
@@ -293,7 +268,6 @@ async def process_frame(frame_data: str):
 
             avg_ear = metrics["avg_ear"]
 
-            # Head pose.
             pose = (
                 head_pose_estimator
                 .estimate_pose(
@@ -306,7 +280,6 @@ async def process_frame(frame_data: str):
             pitch = pose["pitch"]
             roll = pose["roll"]
 
-            # Head movement.
             movement_analyzer.update(
                 yaw,
                 pitch,
@@ -318,7 +291,6 @@ async def process_frame(frame_data: str):
                 .movement_intensity()
             )
 
-            # Gaze tracking.
             gaze_direction = (
 
                 gaze_tracker.estimate_gaze(
@@ -353,7 +325,6 @@ async def process_frame(frame_data: str):
             blink_result["total_blinks"]
         )
 
-        # Temporal emotion from the sequence LSTM over the last 60 frames.
         temporal_emotion = temporal_inference.predict(
             avg_ear=avg_ear,
             yaw=yaw,
@@ -364,14 +335,12 @@ async def process_frame(frame_data: str):
             frame_emotion=emotion,
         )
 
-        # Stress from recent blink rate + head movement + emotion negativity over a rolling window, so it can rise and fall.
         stress_level = _estimate_visual_stress(
             blink_detected=blink_result.get("blink_detected", False),
             movement_score=movement_score,
             emotion=emotion,
         )
 
-        # Cognitive load.
         cognitive_load = (
             cognitive_load_estimator.estimate(
                 blink_rate=total_blinks,
@@ -381,7 +350,6 @@ async def process_frame(frame_data: str):
             )
         )
 
-        # Deception risk.
         deception_risk = (
             deception_estimator.estimate(
                 gaze_shift_frequency=
@@ -398,7 +366,6 @@ async def process_frame(frame_data: str):
             )
         )
 
-        # Cognitive-state model input.
         stress_score = {
 
             "LOW": 1,
@@ -446,14 +413,12 @@ async def process_frame(frame_data: str):
             cognitive_result["confidence"]
         )
 
-        # Visual-only emotion here; the authoritative multimodal fusion runs later once audio is available.
         final_emotion = emotion
 
         fusion_confidence = visual_emotion_confidence
 
         temporal_state = "STABLE"
 
-        # Final result sent back to the client.
         ai_result = {
 
             "emotion":

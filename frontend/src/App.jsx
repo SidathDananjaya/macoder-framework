@@ -22,7 +22,6 @@ import SessionReport from "./components/SessionReport"
 
 import SessionInterpretation from "./components/SessionInterpretation"
 
-// Elapsed milliseconds -> MM:SS.
 const fmt = (ms) => {
   const s = Math.floor(ms / 1000)
   const mm = String(Math.floor(s / 60)).padStart(2, "0")
@@ -32,9 +31,6 @@ const fmt = (ms) => {
 
 const App = () => {
 
-  // Every panel is driven from the current session's frames (accumulated in
-  // `data` during the session, frozen on Stop) so the whole page reflects one
-  // consistent session — no stale CSV-on-disk from a previous run.
   const [data, setData] = useState([])
 
   const [liveAI, setLiveAI] = useState(null)
@@ -43,19 +39,13 @@ const App = () => {
 
   const [history, setHistory] = useState([])
 
-  // Phase 8 - the generated interview report (null until requested).
   const [report, setReport] = useState(null)
 
-  // Phase 9 - the LLM interpretation (null until requested) + loading flag.
   const [interpretation, setInterpretation] = useState(null)
   const [interpreting, setInterpreting] = useState(false)
 
-  // Whether a live session is running (camera + mic active). Off until the
-  // user presses Start, so analysis is a deliberate, freezable session.
   const [recording, setRecording] = useState(false)
 
-  // Change-detection state for the timeline. Kept in a ref so per-frame
-  // comparisons never trigger a re-render.
   const tlRef = useRef({
     startMs: null,
     lastEmotion: null,
@@ -70,15 +60,11 @@ const App = () => {
     }
     setTimeline([])
     setHistory([])
-    // Fresh session: clear the previous run's frames and its report/interpretation
-    // so the tiles, table and panels never mix two sessions.
     setData([])
     setReport(null)
     setInterpretation(null)
   }
 
-  // Append a compact numeric snapshot for the live charts, capped to the last
-  // 60 points (bounded memory, readable sparkline window).
   const pushHistory = (aiData) => {
     setHistory(prev => {
       const point = {
@@ -130,9 +116,6 @@ const App = () => {
     }
   }
 
-  // Live session stats, computed from the current session's frames so they stay
-  // consistent with the report and freeze on Stop. Confidences are 0-1 in the
-  // data and rendered as percentages.
   const avg = (fn) =>
     data.length
       ? data.reduce((sum, row) => sum + (fn(row) ?? 0), 0) / data.length
@@ -154,9 +137,6 @@ const App = () => {
         🧠 MaCoDeR Live Dashboard
       </h1>
 
-      {/* Session control - start/stop the camera & microphone. Stopping
-          freezes the recording so the report and AI interpretation read the
-          same session. */}
       <div className="flex items-center gap-4 mb-8">
 
         {!recording ? (
@@ -177,8 +157,8 @@ const App = () => {
 
         <span className="text-gray-400">
           {recording
-            ? "Recording — camera & microphone active."
-            : "Stopped — start a session, or generate a report."}
+            ? "Recording - camera & microphone active."
+            : "Stopped - start a session, or generate a report."}
         </span>
 
       </div>

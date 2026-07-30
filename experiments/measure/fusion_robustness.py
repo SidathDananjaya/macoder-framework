@@ -1,26 +1,3 @@
-"""Quality-adaptive vs fixed fusion - robustness demonstration (Sections 6.4/6.5).
-
-This is a **mechanism demonstration**, not an accuracy benchmark: RAVDESS has no
-aligned, labelled *degraded* multimodal test set, so we cannot honestly report a
-fixed-vs-adaptive accuracy table. Instead we drive the *real* deployed fusion
-(`MultimodalCognitiveFusion`) with a controlled disagreement case and degrade
-each channel's quality, showing that:
-
-* the **adaptive** fusion shifts its modality weights onto the reliable channel
-  as the other degrades, and follows it in the fused decision;
-* a **fixed** 50/50 fusion (quality ignored) does not adapt;
-* the **"Poor signal quality" warning** fires only when the best channel is poor.
-
-Scenario: the face reads 'neutral' (conf 0.85) while the audio reads 'angry'
-(conf 0.80) - a deliberate disagreement so the *winner* reveals which channel is
-driving the decision.
-
-Run:
-    ./vision_env/Scripts/python.exe -m experiments.measure.fusion_robustness
-
-Writes experiments/measure/fusion_robustness_results.json.
-"""
-
 import json
 import os
 
@@ -44,7 +21,6 @@ CONDITIONS = [
 
 
 def _fixed_5050(v_emo, v_conf, a_emo, a_conf):
-    """Baseline: quality-agnostic 50/50 - just the more confident raw label."""
     return v_emo if v_conf >= a_conf else a_emo
 
 
@@ -53,7 +29,6 @@ def run():
     rows = []
 
     for name, vq, aq in CONDITIONS:
-        # Adaptive: the real deployed fusion (quality scales each confidence).
         out = fusion.process(
             visual_emotion=VISUAL_EMOTION,
             visual_emotion_confidence=VISUAL_CONF,

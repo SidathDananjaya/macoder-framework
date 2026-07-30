@@ -1,7 +1,5 @@
 import { EMOTION_EMOJI } from "../utils/emotion"
 
-// Risk / stress level -> Tailwind text color (green LOW / amber MEDIUM /
-// red HIGH), matching the Phase 4 gauge thresholds used elsewhere.
 const levelColor = (level) =>
   level === "HIGH"
     ? "text-red-400"
@@ -9,7 +7,6 @@ const levelColor = (level) =>
     ? "text-amber-400"
     : "text-green-400"
 
-// A single headline metric tile.
 const Stat = ({ label, value, sub, color = "text-white" }) => (
   <div className="bg-gray-800 rounded-lg p-4">
     <p className="text-gray-400 text-sm">{label}</p>
@@ -18,7 +15,6 @@ const Stat = ({ label, value, sub, color = "text-white" }) => (
   </div>
 )
 
-// Stress level distribution as stacked proportion bars.
 const Distribution = ({ distribution = {} }) => {
   const total =
     Object.values(distribution).reduce((a, b) => a + b, 0) || 1
@@ -86,10 +82,8 @@ const SessionReport = ({ report }) => {
         </p>
       </div>
 
-      {/* Headline summary */}
       <p className="text-gray-200 leading-relaxed">{report.summary}</p>
 
-      {/* Key metrics */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <Stat
           label="Avg Stress"
@@ -140,13 +134,11 @@ const SessionReport = ({ report }) => {
         />
       </div>
 
-      {/* Stress distribution */}
       <div>
         <h3 className="text-lg text-gray-300 mb-3">Stress Distribution</h3>
         <Distribution distribution={stress.distribution} />
       </div>
 
-      {/* Timelines */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <div>
@@ -183,7 +175,6 @@ const SessionReport = ({ report }) => {
 
       </div>
 
-      {/* Recommendations */}
       <div>
         <h3 className="text-lg text-gray-300 mb-3">Recommendations</h3>
         <ul className="space-y-2">

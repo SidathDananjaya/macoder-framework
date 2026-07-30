@@ -42,9 +42,6 @@ from ai_engine.configs.project_paths import (
     EXPERIMENTS_DIR
 )
 
-# =========================
-# LOAD MODELS
-# =========================
 
 MODEL_DIR = (
     EXPERIMENTS_DIR /
@@ -66,9 +63,6 @@ label_encoder = joblib.load(
     "stress_label_encoder.pkl"
 )
 
-# =========================
-# FEATURE EXTRACTION
-# =========================
 
 def extract_features(audio_path):
 
@@ -78,14 +72,12 @@ def extract_features(audio_path):
 
     row = {}
 
-    # Basic
     mfcc = extract_mfcc(signal, sr)
 
     pitch = extract_pitch(signal, sr)
 
     energy = extract_energy(signal)
 
-    # Advanced
     delta = extract_delta_mfcc(signal, sr)
 
     delta2 = extract_delta2_mfcc(signal, sr)
@@ -98,7 +90,6 @@ def extract_features(audio_path):
 
     energy_var = extract_energy_variance(signal)
 
-    # Stress
     speech_rate = estimate_speech_rate(signal, sr)
 
     silence_ratio = calculate_silence_ratio(signal)
@@ -112,7 +103,6 @@ def extract_features(audio_path):
 
     zcr = extract_zero_crossing_rate(signal)
 
-    # Row
     row["pitch"] = pitch
     row["energy"] = energy
     row["speech_rate"] = speech_rate
@@ -142,10 +132,6 @@ def extract_features(audio_path):
 
     return pd.DataFrame([row])
 
-
-# =========================
-# PREDICT
-# =========================
 
 def predict_stress(audio_path):
 

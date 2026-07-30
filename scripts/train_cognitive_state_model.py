@@ -36,9 +36,6 @@ os.makedirs(
 
 df = pd.read_csv(DATASET)
 
-# ----------------------------
-# Convert categorical columns
-# ----------------------------
 
 mapping = {
 

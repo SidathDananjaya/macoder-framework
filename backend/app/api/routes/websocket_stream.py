@@ -43,16 +43,12 @@ async def websocket_endpoint(
 
     await manager.connect(websocket)
 
-    # Fresh vision state (blink total, emotion cache, movement/gaze) per session.
     reset_engine()
 
-    # Fresh rolling-memory windows for each session.
     await reset_memory()
 
-    # Fresh rolling audio window for each session.
     reset_audio()
 
-    # Phase 7 - begin a new frame-by-frame session recording.
     await reset_session()
 
     try:
@@ -71,7 +67,6 @@ async def websocket_endpoint(
                 "audio"
             )
 
-            # Browser's native capture rate (44100/48000); default to the model rate if not sent.
             sample_rate = payload.get(
                 "sample_rate",
                 22050
@@ -83,7 +78,6 @@ async def websocket_endpoint(
                 )
             )
 
-            # Buffer a rolling window, resample to 22050 Hz and infer (throttled); always returns a result.
             audio_result = (
                 await process_audio(
                     audio_data,
@@ -111,7 +105,6 @@ async def websocket_endpoint(
                 final_result
             )
 
-            # Rolling 5s/10s/30s memory, sent to the client but kept out of the log so the CSV stays flat.
             session_memory = (
                 await update_memory(final_result)
             )
@@ -127,7 +120,6 @@ async def websocket_endpoint(
             websocket
         )
 
-        # Save the finished recording as JSON so the report generator always has it, even without an explicit export.
         saved = await save_session_json()
 
         if saved:

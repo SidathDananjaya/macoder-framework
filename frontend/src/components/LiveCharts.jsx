@@ -9,9 +9,6 @@ import {
 
 import { EMOTION_EMOJI } from "../utils/emotion"
 
-// Dark-mode categorical hues from the validated data-viz palette. Each metric
-// is its own single-series card; the card title is the direct label so colour
-// is never the sole distinguisher.
 const METRICS = [
   { key: "stress", label: "Stress", color: "#d95926", domain: [0, 100], unit: "" },
   { key: "risk", label: "Risk", color: "#e66767", domain: [0, 100], unit: "" },
@@ -20,7 +17,6 @@ const METRICS = [
   { key: "blinks", label: "Blinks", color: "#199e70", domain: [0, "auto"], unit: "" },
 ]
 
-// Muted ink / surface tokens (dark surface) from the palette reference.
 const AXIS = "#898781"
 const SURFACE = "#1a1a19"
 
@@ -101,7 +97,6 @@ const Spark = ({ metric, history }) => {
 
 const LiveCharts = ({ history = [] }) => {
 
-  // Recent emotion sequence as an emoji strip (categorical -> not a line chart).
   const recentEmotions = history.slice(-24)
 
   return (

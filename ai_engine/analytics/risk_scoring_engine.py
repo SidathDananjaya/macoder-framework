@@ -12,35 +12,30 @@ class RiskScoringEngine:
 
         score = 0
 
-        # Stress
         if stress_level == "HIGH":
             score += 30
 
         elif stress_level == "MEDIUM":
             score += 15
 
-        # Cognitive Load
         if cognitive_load == "HIGH":
             score += 25
 
         elif cognitive_load == "MEDIUM":
             score += 10
 
-        # Deception
         if deception_risk == "HIGH":
             score += 30
 
         elif deception_risk == "MEDIUM":
             score += 15
 
-        # Anomaly
         if anomaly_risk == "HIGH":
             score += 15
 
         elif anomaly_risk == "MEDIUM":
             score += 8
 
-        # Final label
         if score >= 70:
             level = "CRITICAL"
 

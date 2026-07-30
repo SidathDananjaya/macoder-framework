@@ -19,7 +19,6 @@ from ai_engine.configs.project_paths import (
     EXPERIMENTS_DIR
 )
 
-# Load dataset
 DATASET_PATH = (
     PROCESSED_DIR /
     "audio" /
@@ -28,23 +27,18 @@ DATASET_PATH = (
 
 df = pd.read_csv(DATASET_PATH)
 
-# Features
 X = df.drop(columns=["file", "emotion"])
 
-# Labels
 y = df["emotion"]
 
-# Encode labels
 label_encoder = LabelEncoder()
 
 y_encoded = label_encoder.fit_transform(y)
 
-# Scale features
 scaler = StandardScaler()
 
 X_scaled = scaler.fit_transform(X)
 
-# Split
 X_train, X_test, y_train, y_test = train_test_split(
     X_scaled,
     y_encoded,
@@ -53,7 +47,6 @@ X_train, X_test, y_train, y_test = train_test_split(
     stratify=y_encoded
 )
 
-# Load trained model
 MODEL_PATH = (
     EXPERIMENTS_DIR /
     "exp_001_audio_baseline" /
@@ -62,10 +55,8 @@ MODEL_PATH = (
 
 model = joblib.load(MODEL_PATH)
 
-# Predict
 y_pred = model.predict(X_test)
 
-# Metrics
 accuracy = accuracy_score(y_test, y_pred)
 
 report = classification_report(
@@ -77,13 +68,11 @@ report = classification_report(
 
 print(f"\nAccuracy: {accuracy:.4f}")
 
-# Create experiment directory
 EXPERIMENT_DIR = (
     EXPERIMENTS_DIR /
     "exp_001_audio_baseline"
 )
 
-# Save metrics JSON
 metrics_path = (
     EXPERIMENT_DIR /
     "metrics.json"
@@ -96,7 +85,6 @@ with open(metrics_path, "w") as f:
 print(f"\nMetrics saved:")
 print(metrics_path)
 
-# Confusion Matrix
 cm = confusion_matrix(y_test, y_pred)
 
 plt.figure(figsize=(10, 8))
@@ -116,7 +104,6 @@ plt.xlabel("Predicted")
 
 plt.ylabel("Actual")
 
-# Save figure
 confusion_path = (
     EXPERIMENT_DIR /
     "confusion_matrix.png"

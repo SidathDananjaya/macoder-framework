@@ -1,16 +1,3 @@
-"""Retrain the audio-emotion model on RAVDESS with the ALIGNED richer features.
-
-Uses the *same* ``AudioFeatureExtractor`` the live pipeline uses, so training and
-inference features are identical by construction (no skew). Replaces the weak
-exp_007 model (5 collapsed features, ~0.34) with the enriched feature set.
-
-Reports both a subject-independent (by-actor) score - the honest number - and a
-random-split score for comparison, then trains the final model on all data and
-saves it to experiments/exp_009_audio_emotion_v2/.
-
-    ./vision_env/Scripts/python.exe -m scripts.train_audio_emotion_v2
-"""
-
 import os
 
 import numpy as np
@@ -72,12 +59,10 @@ def main():
     X, y, actors = build_dataset()
     print(f"\n{len(X)} clips, {X.shape[1]} features, {len(np.unique(y))} classes\n")
 
-    # Subject-independent (by-actor) - the honest number.
     gpred = cross_val_predict(_model(), X, y, cv=GroupKFold(5), groups=actors)
     si_acc = accuracy_score(y, gpred)
     si_f1 = f1_score(y, gpred, average="macro", zero_division=0)
 
-    # Random stratified split - comparable to the old 0.34 reporting.
     rpred = cross_val_predict(
         _model(), X, y, cv=StratifiedKFold(5, shuffle=True, random_state=42)
     )
@@ -89,7 +74,6 @@ def main():
     print(f"Random stratified split:        acc={r_acc:.3f}  macroF1={r_f1:.3f}")
     print(f"(old exp_007, 5 features: ~0.34)")
 
-    # Final model on all data.
     encoder = LabelEncoder()
     y_enc = encoder.fit_transform(y)
     scaler = StandardScaler().fit(X)

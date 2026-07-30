@@ -31,9 +31,6 @@ df = pd.read_csv(DATASET_PATH)
 
 print(df.head())
 
-# -----------------------------
-# Features
-# -----------------------------
 
 X = df[[
     "avg_ear",
@@ -48,25 +45,17 @@ X = df[[
     "movement_score"
 ]]
 
-# -----------------------------
-# Labels
-# -----------------------------
 
 y = df["emotion"]
 
-# Encode labels
 encoder = LabelEncoder()
 
 y_encoded = encoder.fit_transform(y)
 
-# Feature Scaling
 scaler = StandardScaler()
 
 X_scaled = scaler.fit_transform(X)
 
-# -----------------------------
-# Split dataset
-# -----------------------------
 
 X_train, X_test, y_train, y_test = train_test_split(
     X_scaled,
@@ -76,9 +65,6 @@ X_train, X_test, y_train, y_test = train_test_split(
     stratify=y_encoded
 )
 
-# -----------------------------
-# Train model
-# -----------------------------
 
 model = VisualBehaviorModel()
 
@@ -87,15 +73,9 @@ model.train(
     y_train
 )
 
-# -----------------------------
-# Predictions
-# -----------------------------
 
 predictions = model.predict(X_test)
 
-# -----------------------------
-# Metrics
-# -----------------------------
 
 accuracy = accuracy_score(
     y_test,
@@ -120,9 +100,6 @@ print(report)
 print("\nConfusion Matrix:\n")
 print(matrix)
 
-# -----------------------------
-# Save model
-# -----------------------------
 
 joblib.dump(
     model,

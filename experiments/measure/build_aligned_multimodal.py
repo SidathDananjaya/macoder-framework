@@ -1,24 +1,3 @@
-"""Build an ALIGNED per-utterance multimodal RAVDESS dataset (for Section 6.3).
-
-Each row = one RAVDESS utterance with all three modalities and the ground-truth
-emotion label, so a genuine cross-modal ablation is possible:
-
-    aud_*  acoustic features (from the existing stress_audio_features.csv)
-    vis_*  aggregated visual-behaviour features (extracted from the video here)
-    tim_*  timing features (VAD response-latency/pause/rate from the audio)
-    emotion (RAVDESS filename label), actor (for subject-independent splits)
-
-Audio (03-01-EE-II-SS-RR-AA.wav) and video (01-01-EE-II-SS-RR-AA.mp4) are matched
-on the shared code EE-II-SS-RR-AA.
-
-Runtime is bounded by ``N_ACTORS`` (default 8 -> ~480 utterances, a few minutes on
-CPU). Pass an integer arg to override, e.g. ``... build_aligned_multimodal 4``.
-
-    ./vision_env/Scripts/python.exe -m experiments.measure.build_aligned_multimodal [N_ACTORS]
-
-Writes datasets/processed/multimodal/aligned_features.csv
-"""
-
 import glob
 import os
 import sys
@@ -40,7 +19,7 @@ AUDIO_ROOT = "datasets/raw/RAVDESS/Audio_Speech_Actors_01-24"
 AUDIO_CSV = "datasets/processed/audio/stress_audio_features.csv"
 OUT_CSV = "datasets/processed/multimodal/aligned_features.csv"
 
-FRAME_STEP = 10  # process every Nth video frame (matches the visual builder)
+FRAME_STEP = 10
 
 facemesh = FaceMeshTracker()
 eye_metrics = EyeMetrics()
@@ -49,13 +28,11 @@ gaze_tracker = GazeTracker()
 
 
 def _code_key(filename):
-    """Shared RAVDESS code EE-II-SS-RR-AA from a file name."""
     parts = os.path.basename(filename).replace(".wav", "").replace(".mp4", "").split("-")
     return "-".join(parts[2:7]) if len(parts) >= 7 else None
 
 
 def _audio_feature_lookup():
-    """Map shared-code -> acoustic feature row (aud_* columns)."""
     df = pd.read_csv(AUDIO_CSV)
     drop = [c for c in ("file", "emotion", "stress_level") if c in df.columns]
     feats = df.drop(columns=drop).select_dtypes(include=[np.number])
@@ -68,7 +45,6 @@ def _audio_feature_lookup():
 
 
 def _visual_features(video_path):
-    """Aggregate genuine visual-behaviour features over a video (vis_*)."""
     cap = cv2.VideoCapture(str(video_path))
     ears, yaws, pitches, rolls, moves, gazes = [], [], [], [], [], []
     idx = 0
@@ -110,7 +86,6 @@ def _visual_features(video_path):
 
 
 def _timing_features(code, actor_dir):
-    """Timing features from the matching audio wav (tim_*)."""
     matches = glob.glob(os.path.join(AUDIO_ROOT, actor_dir, f"03-01-{code}.wav"))
     if not matches:
         return {f"tim_{k}": 0.0 for k in

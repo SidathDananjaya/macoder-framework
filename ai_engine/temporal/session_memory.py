@@ -1,20 +1,3 @@
-"""
-Phase 3 - Session Memory.
-
-Turns the stream of independent per-frame results into a temporally aware
-"Current State + Historical State" view by maintaining rolling statistics over
-the last 5, 10 and 30 seconds.
-
-Windows are WALL-CLOCK based (not frame counts): real backend throughput sits
-well below the 10 FPS send rate, so a fixed frame count would not correspond to
-a fixed duration. Each frame is stamped with ``time.time()`` at ingestion and
-windows are computed by filtering ``now - t <= window``.
-
-The engine tolerates missing keys: ``fuse_results`` returns ``{}`` on error and
-``process_frame`` has a reduced error fallback, so every field is read with a
-default.
-"""
-
 import time
 from collections import Counter, deque
 
@@ -23,10 +6,8 @@ from ai_engine.analytics.session_trend_analyzer import (
 )
 
 
-# Numeric-trend sensitivity on the 0..1 stress scale (first vs second half mean).
 STRESS_TREND_THRESHOLD = 0.05
 
-# Current-vs-historical sensitivity on the 0..100 fusion-score scale.
 FUSION_DELTA_THRESHOLD = 3.0
 
 
@@ -43,7 +24,6 @@ def _mean(values):
 
 
 def _count_changes(labels):
-    """Number of times the label differs from the previous frame."""
     changes = 0
     for prev, cur in zip(labels, labels[1:]):
         if prev != cur:
@@ -56,19 +36,14 @@ class SessionMemory:
     def __init__(self, windows=(5, 10, 30)):
         self.windows = tuple(sorted(windows))
         self._max_window = max(self.windows)
-        # Store of (timestamp, snapshot) tuples, pruned to the largest window.
         self._store = deque()
         self.trend_analyzer = SessionTrendAnalyzer()
 
     def reset(self):
         self._store.clear()
 
-    # ------------------------------------------------------------------
-    # Ingestion
-    # ------------------------------------------------------------------
 
     def _snapshot(self, result):
-        """Pull the fields we track out of a (possibly partial) result dict."""
         return {
             "emotion": result.get(
                 "final_emotion",
@@ -94,16 +69,11 @@ class SessionMemory:
         }
 
     def update(self, result, now=None):
-        """Ingest one frame and return the rolling-memory dict.
-
-        ``now`` is injectable so windows can be tested deterministically.
-        """
         if now is None:
             now = time.time()
 
         self._store.append((now, self._snapshot(result)))
 
-        # Prune anything older than the largest window.
         cutoff = now - self._max_window
         while self._store and self._store[0][0] < cutoff:
             self._store.popleft()
@@ -118,9 +88,6 @@ class SessionMemory:
 
         return memory
 
-    # ------------------------------------------------------------------
-    # Statistics
-    # ------------------------------------------------------------------
 
     def _frames_in(self, window, now):
         lower = now - window
@@ -140,14 +107,12 @@ class SessionMemory:
         deception_risks = [f["deception_risk"] for f in frames]
         stress_scores = [f["stress_score"] for f in frames]
 
-        # Reuse SessionTrendAnalyzer for the categorical trio.
         trend = self.trend_analyzer.analyze(
             emotions,
             stress_levels,
             cognitive_loads,
         )
 
-        # Blink frequency from the cumulative counter (blinks / second).
         blink_start = frames[0]["blink_count"]
         blink_end = frames[-1]["blink_count"]
         elapsed = self._elapsed(window, now)
@@ -180,7 +145,6 @@ class SessionMemory:
         }
 
     def _elapsed(self, window, now):
-        """Actual observed span within the window (<= window)."""
         frames_t = [
             t for (t, _) in self._store if t >= now - window
         ]
@@ -189,7 +153,6 @@ class SessionMemory:
         return frames_t[-1] - frames_t[0]
 
     def _numeric_trend(self, scores):
-        """INCREASING / DECREASING / STABLE from first vs second half mean."""
         if len(scores) < 4:
             return "STABLE"
         mid = len(scores) // 2
@@ -203,7 +166,6 @@ class SessionMemory:
         return "STABLE"
 
     def _current_vs_historical(self, now):
-        """Compare the latest frame's fusion score to the 30s average."""
         if not self._store:
             return {
                 "delta": 0.0,

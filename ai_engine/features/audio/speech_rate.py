@@ -9,7 +9,6 @@ def estimate_speech_rate(signal, sr):
         sr=sr
     )
 
-    # Handle ndarray issue
     if isinstance(tempo, np.ndarray):
 
         if len(tempo) > 0:

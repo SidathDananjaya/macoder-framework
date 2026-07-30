@@ -13,7 +13,6 @@ class HeadPoseEstimator:
 
         img_h, img_w, _ = frame.shape
 
-        # Selected landmark points
         face_2d = []
         face_3d = []
 
@@ -33,7 +32,6 @@ class HeadPoseEstimator:
         face_2d = np.array(face_2d, dtype=np.float64)
         face_3d = np.array(face_3d, dtype=np.float64)
 
-        # Camera matrix
         focal_length = img_w
 
         cam_matrix = np.array([

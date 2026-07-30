@@ -15,10 +15,6 @@ from ai_engine.models.temporal.temporal_emotion_model import (
 )
 
 
-# ---------------------------------------------------
-# Paths
-# ---------------------------------------------------
-
 X_PATH = (
     "datasets/processed/temporal/"
     "X_sequences.npy"
@@ -38,9 +34,6 @@ Path(OUTPUT_DIR).mkdir(
     exist_ok=True
 )
 
-# ---------------------------------------------------
-# Load data
-# ---------------------------------------------------
 
 X = np.load(X_PATH)
 
@@ -50,17 +43,11 @@ print("Loaded sequences:", X.shape)
 
 print("Loaded labels:", y.shape)
 
-# ---------------------------------------------------
-# Encode labels
-# ---------------------------------------------------
 
 encoder = LabelEncoder()
 
 y_encoded = encoder.fit_transform(y)
 
-# ---------------------------------------------------
-# Split dataset
-# ---------------------------------------------------
 
 X_train, X_test, y_train, y_test = train_test_split(
     X,
@@ -70,9 +57,6 @@ X_train, X_test, y_train, y_test = train_test_split(
     stratify=y_encoded
 )
 
-# ---------------------------------------------------
-# Build model
-# ---------------------------------------------------
 
 builder = TemporalEmotionModel()
 
@@ -84,9 +68,6 @@ model = builder.build(
 
 model.summary()
 
-# ---------------------------------------------------
-# Early stopping
-# ---------------------------------------------------
 
 early_stop = EarlyStopping(
     monitor="val_loss",
@@ -94,9 +75,6 @@ early_stop = EarlyStopping(
     restore_best_weights=True
 )
 
-# ---------------------------------------------------
-# Train
-# ---------------------------------------------------
 
 history = model.fit(
 
@@ -115,9 +93,6 @@ history = model.fit(
     callbacks=[early_stop]
 )
 
-# ---------------------------------------------------
-# Evaluate
-# ---------------------------------------------------
 
 predictions = model.predict(X_test)
 
@@ -139,9 +114,6 @@ print(
     )
 )
 
-# ---------------------------------------------------
-# Save model
-# ---------------------------------------------------
 
 model.save(
     f"{OUTPUT_DIR}/temporal_emotion_model.h5"
